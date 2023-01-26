@@ -5,7 +5,7 @@ export default function Layout({ children }) {
     return (
         <Fragment>
             <Head>
-                <title>Phoenix Construction Resources Inorporated</title>
+                <title>Larnelle Art</title>
 
                 <link
                     rel="apple-touch-icon"
