@@ -28,7 +28,6 @@ export default function Home() {
             <div
                 className="vstack"
                 style={{
-                    zIndex: "-1",
                     marginLeft: "-10vw",
                     // marginTop: 38 + scrollPosition / 40 + "vw",
                     marginTop: "40vw",
@@ -115,6 +114,7 @@ export default function Home() {
                         position: "relative",
                         overflow: "hidden",
                         marginTop: "50vw",
+                        zIndex: "2",
                     }}
                 >
                     <Image
