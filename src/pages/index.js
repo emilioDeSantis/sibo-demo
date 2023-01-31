@@ -32,6 +32,42 @@ export default function Home() {
     // console.log(Math.abs(scrollPosition - (yOffest + 0 * picHeight)) * 200 / height)
     return (
         <Fragment>
+
+<NextSeo
+                title="Larnelle Art"
+                description="Owner of the Muzoem"
+                canonical="https://www"
+                openGraph={{
+                    url: "https://www",
+                    title: "Larnelle Art",
+                    description:
+                        "Owner of the Muzoem",
+                    images: [
+                        {
+                            url: "/openg.png",
+                            width: 800,
+                            height: 600,
+                            alt: "Og Image Alt",
+                            type: "image/png",
+                        },
+                        {
+                            url: "https://www.example.com/og-image02.jpg",
+                            width: 900,
+                            height: 800,
+                            alt: "Og Image Alt Second",
+                            type: "image/jpeg",
+                        },
+                        { url: "https://www.example.com/og-image03.jpg" },
+                        { url: "https://www.example.com/og-image04.jpg" },
+                    ],
+                    site_name: "Larnelle Art",
+                }}
+                twitter={{
+                    handle: "@handle",
+                    site: "@site",
+                    cardType: "summary_large_image",
+                }}
+            />
             <div
                 className="vstack"
                 style={{
