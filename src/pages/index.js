@@ -32,27 +32,6 @@ export default function Home() {
     // console.log(Math.abs(scrollPosition - (yOffest + 0 * picHeight)) * 200 / height)
     return (
         <Fragment>
-        <div
-            style={{
-                width: "100vw",
-                height: '100vh',
-                position: "fixed",
-                overflow: "hidden",
-                // zIndex: '-1',
-            }}
-        >
-            <Image
-                src="/chapel.png"
-                alt="test"
-                fill
-                sizes="100vw"
-                priority
-                style={{
-                    objectFit: "cover",
-                    opacity: '80%',
-                }}
-            />
-        </div>
             <div
                 className="vstack"
                 style={{
@@ -64,7 +43,7 @@ export default function Home() {
                     color: "#D197FF44",
                     fontSize: "5.8vw",
                     fontWeight: "200",
-                    lineHeight: '145%',
+                    lineHeight: "145%",
                 }}
             >
                 <div
@@ -148,52 +127,72 @@ export default function Home() {
                 <div
                     style={{
                         width: "100vw",
-                        height: '0.3px',
-                        background: '#D197FF',
-                        zIndex: '3',
+                        height: "0.3px",
+                        background: "#D197FF",
+                        zIndex: "3",
                     }}
                 />
                 <div
                     className="vstack"
                     style={{
                         width: "100vw",
-                        marginTop: '20vw',
-                        marginBottom: '30vw',
-                    }}
-                >
-
-                <div
-                    className="hstack"
-                    style={{
-                        width: "100vw",
-                        justifyContent: "center",
+                        marginBottom: "36vw",
                     }}
                 >
                     <div
                         style={{
-                            width: '80vw',
-                            paddingBottom: "12vw",
-                            fontSize: "5.2vw",
-                            fontWeight: "200",
-                            lineHeight: '180%',
-                            zIndex: '3',
+                            width: "100vw",
+                            height: "200vw",
+                            position: "absolute",
+                            overflow: "hidden",
+                            // zIndex: '-1',
                         }}
                     >
-                        {'"Tattoos are not just about ink and skin, they are a reflection of our souls."'}
+                        <Image
+                            src="/chapel.png"
+                            alt="test"
+                            fill
+                            sizes="100vw"
+                            priority
+                            style={{
+                                objectFit: "cover",
+                                // opacity: "80%",
+                            }}
+                        />
                     </div>
-                </div>
+
+                    <div
+                        className="hstack"
+                        style={{
+                            width: "100vw",
+                            justifyContent: "center",
+                            paddingTop: "20vw",
+                        }}
+                    >
+                        <div
+                            style={{
+                                width: "80vw",
+                                paddingBottom: "12vw",
+                                fontSize: "5.2vw",
+                                fontWeight: "200",
+                                lineHeight: "180%",
+                                zIndex: "3",
+                            }}
+                        >
+                            {
+                                '"Tattoos are not just about ink and skin, they are a reflection of our souls."'
+                            }
+                        </div>
+                    </div>
                     <div
                         className="vstack"
                         style={{
                             gap: "10vw",
                             marginTop: "8vw",
-                            alignItems: 'center',
+                            alignItems: "center",
                         }}
                     >
-                        <ArrowButton
-                            name="GALLARY"
-                            href="/gallary"
-                        />
+                        <ArrowButton name="GALLARY" href="/gallary" />
                         <ArrowButton name="ABOUT" href="/about" />
                         <ArrowButton name="TOUR" href="/tour" />
                         <ArrowButton
@@ -206,8 +205,7 @@ export default function Home() {
                         style={{
                             justifyContent: "flex-end",
                         }}
-                    >
-                    </div>
+                    ></div>
                 </div>
 
                 <div
@@ -219,10 +217,10 @@ export default function Home() {
                 >
                     <div
                         style={{
-                            paddingBottom: "10vw",
+                            paddingBottom: "6vw",
                             fontSize: "9vw",
                             fontWeight: "200",
-                            zIndex: '3',
+                            zIndex: "3",
                         }}
                     >
                         FEATURED PIECES
@@ -321,16 +319,20 @@ export default function Home() {
                                     priority
                                     style={{
                                         objectFit: "cover",
-                                        opacity: (100 - (Math.pow(
-                                            (Math.abs(
-                                                scrollPosition -
-                                                    (yOffest +
-                                                        index * picHeight)
-                                            ) *
-                                                1.3) /
-                                                height,
-                                            2
-                                        )) * 100) + '%',
+                                        // opacity:
+                                        //     100 -
+                                        //     Math.pow(
+                                        //         (Math.abs(
+                                        //             scrollPosition -
+                                        //                 (yOffest +
+                                        //                     index * picHeight)
+                                        //         ) *
+                                        //             1.3) /
+                                        //             height,
+                                        //         2
+                                        //     ) *
+                                        //         100 +
+                                        //     "%",
                                     }}
                                 />
                                 {/* <div
@@ -373,12 +375,13 @@ function ArrowButton({ href, name, width }) {
             className="hstack"
             style={{
                 alignItems: "center",
-                justifyContent: 'center',
+                justifyContent: "center",
                 width: "66vw",
                 zIndex: "2",
-                border: '0.5px solid white',
+                border: "0.5px solid white",
                 gap: "6vw",
-                paddingBlock: '5vw',
+                paddingBlock: "5vw",
+                background: '#0003'
             }}
         >
             <div
