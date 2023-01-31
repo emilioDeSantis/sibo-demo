@@ -36,13 +36,13 @@ export default function Home() {
 
 <NextSeo
                 title="Larnelle Art"
-                description="Owner of the Muzoem"
+                description="Tattoo Artist"
                 canonical="https://www"
                 openGraph={{
                     url: "https://www",
                     title: "Larnelle Art",
                     description:
-                        "Owner of the Muzoem",
+                        "Tattoo Artist",
                     images: [
                         {
                             url: "/openg.png",
