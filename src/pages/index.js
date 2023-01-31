@@ -44,6 +44,7 @@ export default function Home() {
                     fontSize: "5.8vw",
                     fontWeight: "200",
                     lineHeight: "145%",
+                    zIndex: '1',
                 }}
             >
                 <div
@@ -106,6 +107,27 @@ export default function Home() {
                 <div
                     style={{
                         width: "100vw",
+                        height: "175vw",
+                        position: "absolute",
+                        overflow: "hidden",
+                        // zIndex: '-1',
+                    }}
+                >
+                    <Image
+                        src="/chapel.png"
+                        alt="test"
+                        fill
+                        sizes="100vw"
+                        priority
+                        style={{
+                            objectFit: "cover",
+                            opacity: "80%",
+                        }}
+                    />
+                </div>
+                <div
+                    style={{
+                        width: "100vw",
                         aspectRatio: "734/1024",
                         position: "relative",
                         overflow: "hidden",
@@ -124,32 +146,32 @@ export default function Home() {
                         }}
                     />
                 </div>
-                <div
+                {/* <div
                     style={{
                         width: "100vw",
                         height: "0.3px",
                         background: "#D197FF",
                         zIndex: "3",
                     }}
-                />
+                /> */}
                 <div
                     className="vstack"
                     style={{
                         width: "100vw",
-                        marginBottom: "36vw",
+                        marginBottom: "30vw",
                     }}
                 >
                     <div
                         style={{
                             width: "100vw",
-                            height: "200vw",
+                            height: "190vw",
                             position: "absolute",
                             overflow: "hidden",
                             // zIndex: '-1',
                         }}
                     >
                         <Image
-                            src="/chapel.png"
+                            src="/chapel2.png"
                             alt="test"
                             fill
                             sizes="100vw"
@@ -166,7 +188,7 @@ export default function Home() {
                         style={{
                             width: "100vw",
                             justifyContent: "center",
-                            paddingTop: "20vw",
+                            paddingTop: "16vw",
                         }}
                     >
                         <div
