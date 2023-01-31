@@ -179,7 +179,7 @@ export default function Home() {
                             zIndex: '3',
                         }}
                     >
-                        "Tattoos are not just about ink and skin, they are a reflection of our souls."<br/>{"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"}- Unknown
+                        "Tattoos are not just about ink and skin, they are a reflection of our souls."
                     </div>
                 </div>
                     <div
