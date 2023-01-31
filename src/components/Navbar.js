@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Fragment, useState } from "react";
 import Image from "next/image";
 
-const navigationRoutes = ["home", "portfolio", "book", "tour"];
+const navigationRoutes = ["home", "gallary", "about", "tour"];
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
