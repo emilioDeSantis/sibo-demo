@@ -378,10 +378,9 @@ function ArrowButton({ href, name, width }) {
                 justifyContent: "center",
                 width: "66vw",
                 zIndex: "2",
-                border: "0.5px solid white",
+                border: "0.36vw solid white",
                 gap: "6vw",
                 paddingBlock: "5vw",
-                background: '#0003'
             }}
         >
             <div
@@ -392,7 +391,7 @@ function ArrowButton({ href, name, width }) {
             >
                 {name}
             </div>
-            <Arrow height={2.4} width={10} lineThickness={0.4} />
+            <Arrow height={2.4} width={10} lineThickness={0.36} />
         </Link>
     );
 }
