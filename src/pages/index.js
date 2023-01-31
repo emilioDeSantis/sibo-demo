@@ -9,39 +9,68 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
     const scrollPosition = useScrollPosition();
 
-    const [yOffest, setYOffset] = useState(1)
-    const [picHeight, setPicHeight] = useState(1)
+    const [yOffest, setYOffset] = useState(1);
+    const [picHeight, setPicHeight] = useState(1);
 
     // const yOffest = useWindowSize().width * 3.4;
     // const picHeight = useWindowSize().width * 1.3;
-    const {height, width} = useWindowSize()
+    const { height, width } = useWindowSize();
 
     useEffect(() => {
-        setYOffset(width * 3.4)
-        setPicHeight(width * 1.3)
+        setYOffset(width * 3.8);
+        setPicHeight(width * 1.3);
     }, [width]);
-    const featured = ['/pic1.png', '/pic2.png', '/pic3.png','/pic4.png', '/pic5.png', '/pic6.png',]
+    const featured = [
+        "/pic1.png",
+        "/pic2.png",
+        "/pic3.png",
+        "/pic4.png",
+        "/pic5.png",
+        "/pic6.png",
+    ];
 
     // console.log(Math.abs(scrollPosition - (yOffest + 0 * picHeight)) * 200 / height)
     return (
         <Fragment>
+        <div
+            style={{
+                width: "100vw",
+                height: '100vh',
+                position: "fixed",
+                overflow: "hidden",
+                // zIndex: '-1',
+            }}
+        >
+            <Image
+                src="/chapel.png"
+                alt="test"
+                fill
+                sizes="100vw"
+                priority
+                style={{
+                    objectFit: "cover",
+                    opacity: '80%',
+                }}
+            />
+        </div>
             <div
                 className="vstack"
                 style={{
-                    marginLeft: "-10vw",
-                    // marginTop: 38 + scrollPosition / 40 + "vw",
-                    marginTop: "40vw",
+                    marginLeft: "-18vw",
+                    // marginTop: 20 + scrollPosition / 40 + "vw",
+                    marginTop: "20vw",
                     position: "absolute",
-                    width: "110vw",
+                    width: "118vw",
+                    color: "#D197FF44",
+                    fontSize: "5.8vw",
+                    fontWeight: "200",
+                    lineHeight: '145%',
                 }}
             >
                 <div
                     style={{
                         whiteSpace: "nowrap",
                         overflow: "hidden",
-                        fontWeight: "200",
-                        fontSize: "5.6vw",
-                        color: "#444",
                     }}
                 >
                     TATTOO ARTIST TATTOO ARTIST TATTOO ARTIST TATTOO ARTIST
@@ -51,9 +80,6 @@ export default function Home() {
                     style={{
                         whiteSpace: "nowrap",
                         overflow: "hidden",
-                        fontWeight: "200",
-                        fontSize: "5.6vw",
-                        color: "#444",
                         transform: "rotate(180deg)",
                     }}
                 >
@@ -64,9 +90,6 @@ export default function Home() {
                     style={{
                         whiteSpace: "nowrap",
                         overflow: "hidden",
-                        fontWeight: "200",
-                        fontSize: "5.6vw",
-                        color: "#444",
                     }}
                 >
                     O ARTIST TATTOO ARTIST{" "}
@@ -84,9 +107,6 @@ export default function Home() {
                     style={{
                         whiteSpace: "nowrap",
                         overflow: "hidden",
-                        fontWeight: "200",
-                        fontSize: "5.6vw",
-                        color: "#444",
                         transform: "rotate(180deg)",
                     }}
                 >
@@ -97,9 +117,6 @@ export default function Home() {
                     style={{
                         whiteSpace: "nowrap",
                         overflow: "hidden",
-                        fontWeight: "200",
-                        fontSize: "5.6vw",
-                        color: "#444",
                     }}
                 >
                     IST TATTOO ARTIST TATTOO ARTIST TATTOO ARTIST TATTOO ARTIST
@@ -110,10 +127,10 @@ export default function Home() {
                 <div
                     style={{
                         width: "100vw",
-                        aspectRatio: "1100/1024",
+                        aspectRatio: "734/1024",
                         position: "relative",
                         overflow: "hidden",
-                        marginTop: "50vw",
+                        marginTop: "32vw",
                         zIndex: "2",
                     }}
                 >
@@ -129,46 +146,60 @@ export default function Home() {
                     />
                 </div>
                 <div
+                    style={{
+                        width: "100vw",
+                        height: '0.3px',
+                        background: '#D197FF',
+                        zIndex: '3',
+                    }}
+                />
+                <div
                     className="vstack"
                     style={{
-                        background:
-                            "radial-gradient(circle, rgba(2,255,149,1) 0%, rgba(12,209,145,1) 42%, rgba(15,159,168,1) 100%)",
                         width: "100vw",
+                        marginTop: '20vw',
+                        marginBottom: '30vw',
+                    }}
+                >
+
+                <div
+                    className="hstack"
+                    style={{
+                        width: "100vw",
+                        justifyContent: "center",
                     }}
                 >
                     <div
-                        className="hstack"
                         style={{
-                            width: "100vw",
-                            justifyContent: "center",
+                            width: '80vw',
+                            paddingBottom: "12vw",
+                            fontSize: "5.2vw",
+                            fontWeight: "200",
+                            lineHeight: '180%',
+                            zIndex: '3',
                         }}
                     >
-                        <div
-                            style={{
-                                paddingBlock: "5vw",
-                                fontSize: "6vw",
-                                fontWeight: "700",
-                            }}
-                        >
-                            Meet the Artist
-                        </div>
+                        "Tattoos are not just about ink and skin, they are a reflection of our souls."<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Unknown
                     </div>
+                </div>
                     <div
                         className="vstack"
                         style={{
-                            paddingInline: "3vw",
-                            gap: "3vw",
+                            gap: "10vw",
                             marginTop: "8vw",
+                            alignItems: 'center',
                         }}
                     >
                         <ArrowButton
+                            name="GALLARY"
+                            href="/portfolio"
+                        />
+                        <ArrowButton name="ABOUT" href="/book" />
+                        <ArrowButton name="TOUR" href="/tour" />
+                        <ArrowButton
                             name="MUZEOM"
                             href="https://www.instagram.com/the_muzeom/"
-                            width={77}
                         />
-                        <ArrowButton name="PORTFOLIO" href="/portfolio" width={93} />
-                        <ArrowButton name="BOOK" href="/book" width={54} />
-                        <ArrowButton name="TOUR" href="/tour" width={51} />
                     </div>
                     <div
                         className="hstack"
@@ -176,48 +207,27 @@ export default function Home() {
                             justifyContent: "flex-end",
                         }}
                     >
-                        <div
-                            style={{
-                                width: "82vw",
-                                aspectRatio: "58/98",
-                                position: "relative",
-                                overflow: "hidden",
-                                // marginTop: -20 - scrollPosition / 60 + "vw",
-                                marginTop: "-35vw",
-                            }}
-                        >
-                            <Image
-                                src="/larnelle.png"
-                                alt="test"
-                                fill
-                                sizes="100vw"
-                                priority
-                                style={{
-                                    objectFit: "cover",
-                                    mixBlendMode: "darken",
-                                }}
-                            />
-                        </div>
                     </div>
                 </div>
 
                 <div
-                        className="hstack"
+                    className="hstack"
+                    style={{
+                        width: "100vw",
+                        justifyContent: "center",
+                    }}
+                >
+                    <div
                         style={{
-                            width: "100vw",
-                            justifyContent: "center",
+                            paddingBottom: "10vw",
+                            fontSize: "9vw",
+                            fontWeight: "200",
+                            zIndex: '3',
                         }}
                     >
-                        <div
-                            style={{
-                                paddingBlock: "5vw",
-                                fontSize: "6vw",
-                                fontWeight: "700",
-                            }}
-                        >
-                            Featured Work
-                        </div>
+                        FEATURED PIECES
                     </div>
+                </div>
                 {/* <div
                     style={{
                         position: "sticky",
@@ -280,58 +290,77 @@ export default function Home() {
                         </div>
                     </div>
                 </div> */}
-{featured.map((href, index) => {
-  return(
-    <div 
-    key = {href}
-        className="hstack"
-        style={{
-            width: "100vw",
-            height: picHeight + "px",
-            justifyContent: "center",
-            alignItems: "center",
-            paddingBlock: "2vw",
-        }}
-    >
-        <div
-            style={{
-                height: "100%",
-                width: "100%",
-                aspectRatio: "0.8",
-                position: "relative",
-                overflow: "hidden",
-                // transform: `scale(${Math.min(100,(100 - (Math.abs(scrollPosition - (yOffest + index * picHeight)) * 100 / height)))}%)`,
-              }}
-        >
-            <Image
-                src={href}
-                alt="test"
-                fill
-                sizes="100vw"
-                priority
-                style={{
-                    objectFit: "cover",
-                }}
-            />
-            <div
-                style={{
-                    height: "100%",
-                    width: "100%",
-                    // background: 
-                    //     scrollPosition > (yOffest + index * picHeight)? 'red' : 'blue',
-                    background: `rgba(0,0,0,${
-                        Math.pow(Math.abs(scrollPosition - (yOffest + index * picHeight)) * 1.3 / height, 2)
-                    })`,
-                    position: "absolute",
-                }}
-            ></div>
-        </div>
-    </div>
-)
-})}
-<div style={{
-    height: '30vw'
-}}/>
+                {featured.map((href, index) => {
+                    return (
+                        <div
+                            key={href}
+                            className="hstack"
+                            style={{
+                                width: "100vw",
+                                height: picHeight + "px",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                paddingBlock: "2vw",
+                            }}
+                        >
+                            <div
+                                style={{
+                                    height: "100%",
+                                    width: "100%",
+                                    aspectRatio: "0.8",
+                                    position: "relative",
+                                    overflow: "hidden",
+                                    // transform: `scale(${Math.min(100,(100 - (Math.abs(scrollPosition - (yOffest + index * picHeight)) * 100 / height)))}%)`,
+                                }}
+                            >
+                                <Image
+                                    src={href}
+                                    alt="test"
+                                    fill
+                                    sizes="100vw"
+                                    priority
+                                    style={{
+                                        objectFit: "cover",
+                                        opacity: (100 - (Math.pow(
+                                            (Math.abs(
+                                                scrollPosition -
+                                                    (yOffest +
+                                                        index * picHeight)
+                                            ) *
+                                                1.3) /
+                                                height,
+                                            2
+                                        )) * 100) + '%',
+                                    }}
+                                />
+                                {/* <div
+                                    style={{
+                                        height: "100%",
+                                        width: "100%",
+                                        // background:
+                                        //     scrollPosition > (yOffest + index * picHeight)? 'red' : 'blue',
+                                        background: `rgba(0,0,0,${Math.pow(
+                                            (Math.abs(
+                                                scrollPosition -
+                                                    (yOffest +
+                                                        index * picHeight)
+                                            ) *
+                                                1.3) /
+                                                height,
+                                            2
+                                        )})`,
+                                        position: "absolute",
+                                    }}
+                                ></div> */}
+                            </div>
+                        </div>
+                    );
+                })}
+                <div
+                    style={{
+                        height: "30vw",
+                    }}
+                />
             </div>
         </Fragment>
     );
@@ -341,23 +370,26 @@ function ArrowButton({ href, name, width }) {
     return (
         <Link
             href={href}
-            className="vstack"
+            className="hstack"
             style={{
-                alignItems: "flex-start",
-                width: "normal",
-                zIndex: '2',
+                alignItems: "center",
+                justifyContent: 'center',
+                width: "66vw",
+                zIndex: "2",
+                border: '0.5px solid white',
+                gap: "6vw",
+                paddingBlock: '5vw',
             }}
         >
             <div
                 style={{
-                    fontSize: "15vw",
-                    fontWeight: "800",
-                    lineHeight: "0.64em",
+                    fontSize: "6vw",
+                    fontWeight: "300",
                 }}
             >
                 {name}
             </div>
-            <Arrow height={6} width={width} lineThickness={0.7} />
+            <Arrow height={2.4} width={10} lineThickness={0.4} />
         </Link>
     );
 }
