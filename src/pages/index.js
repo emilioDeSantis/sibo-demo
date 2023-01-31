@@ -121,7 +121,7 @@ export default function Home() {
                         priority
                         style={{
                             objectFit: "cover",
-                            opacity: "80%",
+                            opacity: "50%",
                         }}
                     />
                 </div>
