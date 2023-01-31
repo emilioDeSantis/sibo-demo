@@ -192,9 +192,9 @@ export default function Home() {
                     >
                         <ArrowButton
                             name="GALLARY"
-                            href="/portfolio"
+                            href="/gallary"
                         />
-                        <ArrowButton name="ABOUT" href="/book" />
+                        <ArrowButton name="ABOUT" href="/about" />
                         <ArrowButton name="TOUR" href="/tour" />
                         <ArrowButton
                             name="MUZEOM"
