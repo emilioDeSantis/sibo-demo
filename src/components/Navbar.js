@@ -18,7 +18,8 @@ export default function Navbar() {
                     zIndex: "9",
                     width: "100vw",
                     alignItems: "center",
-                    height: "11vw",
+                    height: "15vw",
+                    background: '#0008',
                 }}
             >
                 <Link href="/">
@@ -28,6 +29,7 @@ export default function Navbar() {
                             aspectRatio: "4",
                             position: "relative",
                             overflow: "hidden",
+                            transform: 'translate(0,-1vw)',
                         }}
                     >
                         <Image
