@@ -134,10 +134,10 @@ export default function Gallery() {
                     width: "100vw",
                     justifyContent: "center",
                     paddingTop: "15vw",
-                    paddingBottom: "12vw",
+                    // paddingBottom: "12vw",
                 }}
             >
-                <ArrowButton name="BOOK" href="/book" thin={true} />
+                {/* <ArrowButton name="BOOK" href="/book" thin={true} /> */}
             </div>
             <div
                 style={{
