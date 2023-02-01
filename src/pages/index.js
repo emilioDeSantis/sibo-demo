@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
+import ArrowButton from "../components/ArrowButton";
 import useScrollPosition from "../hooks/useScrollPosistion";
 import useWindowSize from "../hooks/useWindowSize";
 import styles from "../styles/Home.module.css";
@@ -246,14 +247,15 @@ export default function Home() {
                     <div
                         className="vstack"
                         style={{
-                            gap: "10vw",
-                            marginTop: "8vw",
+                            gap: "7vw",
+                            marginTop: "4vw",
                             alignItems: "center",
                         }}
                     >
-                        <ArrowButton name="GALLARY" href="/gallary" />
-                        <ArrowButton name="ABOUT" href="/about" />
+                        <ArrowButton name="GALLERY" href="/gallery" />
                         <ArrowButton name="TOUR" href="/tour" />
+                        <ArrowButton name="BOOK" href="/book" />
+                        <ArrowButton name="ABOUT" href="/about" />
                         <ArrowButton
                             name="MUZEOM"
                             href="https://www.instagram.com/the_muzeom/"
@@ -424,61 +426,5 @@ export default function Home() {
                 />
             </div>
         </Fragment>
-    );
-}
-
-function ArrowButton({ href, name, width }) {
-    return (
-        <Link
-            href={href}
-            className="hstack"
-            style={{
-                alignItems: "center",
-                justifyContent: "center",
-                width: "66vw",
-                zIndex: "2",
-                border: "0.36vw solid white",
-                gap: "6vw",
-                paddingBlock: "5vw",
-            }}
-        >
-            <div
-                style={{
-                    fontSize: "6vw",
-                    fontWeight: "300",
-                }}
-            >
-                {name}
-            </div>
-            <Arrow height={2.4} width={10} lineThickness={0.36} />
-        </Link>
-    );
-}
-
-function Arrow({ height, width, lineThickness }) {
-    let strokeWidth = (lineThickness * 100) / height;
-    let viewWidth = (width * 100) / height;
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox={`0 0 ${viewWidth} 100`}
-            strokeWidth={strokeWidth}
-            stroke="currentColor"
-            className="w-6 h-6"
-            style={{
-                height: height + "vw",
-            }}
-        >
-            <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d={`M0 50 h${viewWidth - strokeWidth / 2} L${viewWidth - 50} ${
-                    strokeWidth / 2
-                } M${viewWidth - strokeWidth / 2} 50 L${viewWidth - 50} ${
-                    100 - strokeWidth / 2
-                } `}
-            />
-        </svg>
     );
 }
