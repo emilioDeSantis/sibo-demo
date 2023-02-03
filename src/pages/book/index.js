@@ -216,7 +216,7 @@ export default function Gallery() {
                 factors and answer any questions you have about the pricing. We
                 accept cash and most major credit cards for payment and require
                 a non-refundable deposit to book your appointment. If you have
-                any questions about our pricing or payment options, please don't
+                any questions about our pricing or payment options, please do not
                 hesitate to ask.
             </p>
             <Subtitle text={"AFTERCARE"} href={"/church1.png"} />
@@ -229,7 +229,7 @@ export default function Gallery() {
                 experience some itching and peeling during the healing process,
                 but it is important to resist the urge to pick or scratch the
                 area. If you have any questions or concerns about the healing of
-                your tattoo, please don't hesitate to contact us.
+                your tattoo, please do not hesitate to contact us.
                 Keep the bandage on for a minimum of 2-4 hours.<br></br><br></br>
 
 1. Gently remove the bandage and wash the area with warm water and a mild, fragrance-free soap. Pat the area dry with a clean towel.<br></br><br></br>
