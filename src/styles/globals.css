@@ -31,7 +31,9 @@ a {
     color: inherit;
     text-decoration: none;
 }
-
+p {
+    margin: 0;
+}
 * {
     box-sizing: border-box;
 }
@@ -106,6 +108,34 @@ button {
     padding-inline: var(--side-margin);
     display: flex;
     align-items: center;
+}
+
+.paragrapgh {
+    font-weight: 300;
+    font-size: 4.1vw;
+    margin-inline: 2vw;
+    margin-top: 8vw;
+    line-height: 150%;
+    z-index: 1;
+    opacity: 70%;
+}
+
+.subtitle {
+    font-weight: 800;
+    font-size: 3.4vw;
+    margin-inline: 2vw;
+    margin-top: 4vw;
+    line-height: 200%;
+    z-index: 1;
+}
+
+.text {
+    font-weight: 300;
+    font-size: 4.2vw;
+    margin-inline: 2vw;
+    line-height: 140%;
+    z-index: 1;
+    opacity: 70%;
 }
 
 @media (prefers-color-scheme: dark) {
