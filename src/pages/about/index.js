@@ -137,9 +137,9 @@ export default function About() {
                 Larnelle is a talented and experienced tattoo artist who has
                 built a reputation for creating stunning and intricate tattoos.
                 Larnelle is known for his attention to detail and ability to
-                bring his clients' ideas to life with beautiful and meaningful
+                bring his clients ideas to life with beautiful and meaningful
                 tattoos. He is passionate about the art form and is constantly
-                striving to improve and evolve as an artist. Whether you're
+                striving to improve and evolve as an artist. Whether you are
                 looking for a bold and colorful piece or a more minimalist
                 design, Larnelle has the skills and creativity to turn your
                 vision into a work of art.
@@ -210,7 +210,7 @@ export default function About() {
                 tattoos and customer service. The Muzeom is equipped with
                 state-of-the-art equipment and features a spacious and inviting
                 atmosphere that is perfect for both first-time clients and
-                seasoned tattoo enthusiasts. If you're looking for a place to
+                seasoned tattoo enthusiasts. If you are looking for a place to
                 get a tattoo that is both professional and welcoming, The Muzeom
                 is the perfect destination.
             </p>
