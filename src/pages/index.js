@@ -32,15 +32,24 @@ export default function Home() {
         "/pic6.png",
     ];
 
-    return(
-        <div style={{
-            height: '140vw',
-            width: '80vw',
-            background: 'green',
-        }}>
-
+    return (
+        <div
+            style={{
+                height: "140vw",
+                width: "80vw",
+                background: "green",
+                paddingInline: '10vw',
+            }}
+        >
+            <div
+                style={{
+                    height: "140vw",
+                    width: "100%",
+                    background: "red",
+                }}
+            ></div>
         </div>
-    )
+    );
 
     // console.log(Math.abs(scrollPosition - (yOffest + 0 * picHeight)) * 200 / height)
     return (
