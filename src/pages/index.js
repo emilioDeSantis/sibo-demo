@@ -34,8 +34,8 @@ export default function Home() {
 
     return(
         <div style={{
-            height: '80vw',
-            width: '140vw',
+            height: '140vw',
+            width: '80vw',
             background: 'green',
         }}>
 
