@@ -38,11 +38,11 @@ export default function Home() {
                 height: "140vw",
                 width: "80vw",
                 background: "green",
-                paddingInline: '10vw',
             }}
         >
             <div
                 style={{
+                    marginInline: '10vw',
                     height: "140vw",
                     width: "100%",
                     background: "red",
