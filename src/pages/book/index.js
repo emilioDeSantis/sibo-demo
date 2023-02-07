@@ -246,6 +246,40 @@ export default function Gallery() {
 
 7. Keep the area moisturized and protected with a high SPF sunscreen after it has fully healed.
             </p>
+
+            <Subtitle text={"F.A.Q."} href={"/church1.png"} />
+
+            <p className="paragrapgh" style={{}}>
+            Q: Is getting a tattoo safe?<br></br>
+A: Yes, getting a tattoo is safe when done by a professional tattoo artist using sterile equipment and following proper health and safety protocols.<br></br><br></br>
+
+Q: How do I choose a design?<br></br>
+A: You can choose a design from the tattoo artist's portfolio, bring in a picture or image for inspiration, or work with the artist to create a custom design.<br></br><br></br>
+
+Q: What should I expect during the tattoo process?<br></br>
+A: During the tattoo process, you can expect the artist to clean and prepare the skin, outline the design, and fill in the tattoo with ink. The process can take anywhere from a few minutes to several hours, depending on the size and complexity of the design.<br></br><br></br>
+
+Q: How should I care for my new tattoo?<br></br>
+A: It is important to keep the tattoo clean and moisturized during the healing process. The artist will provide aftercare instructions and recommend products to use.<br></br><br></br>
+
+Q: What are the aftercare instructions for my tattoo?<br></br>
+A: Aftercare instructions will vary depending on the artist, but generally include cleaning the tattoo with soap and water, avoiding swimming, direct sunlight, and picking at scabs.<br></br><br></br>
+
+Q: Can I bring my own design or picture for my tattoo?<br></br>
+A: Yes, you can bring in a design or picture for inspiration, but the final design may be modified by the artist to fit the specific placement and dimensions of the tattoo.<br></br><br></br>
+
+Q: How much does a tattoo cost?<br></br>
+A: The cost of a tattoo will vary depending on the size, complexity, and location of the design. It is best to contact the artist for a quote or to discuss pricing options.<br></br><br></br>
+
+Q: How long does it take for a tattoo to heal?<br></br>
+A: The healing time for a tattoo will vary, but it usually takes 2-4 weeks for the outer layer of skin to heal. The ink will continue to settle and fade over the next few months.<br></br><br></br>
+
+Q: Can I bring someone with me to the tattoo appointment?<br></br>
+A: Yes, you can bring a friend or family member with you to the tattoo appointment if you feel more comfortable.<br></br><br></br>
+
+Q: What should I do if I have an allergic reaction to the tattoo?<br></br>
+A: If you have an allergic reaction to the tattoo, it is important to contact the artist and seek medical attention. The artist can advise on the best course of action.<br></br><br></br>
+            </p>
         </div>
     );
 }

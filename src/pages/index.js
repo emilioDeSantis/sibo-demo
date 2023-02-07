@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import ArrowButton from "../components/ArrowButton";
+import Subtitle from "../components/Subtitle";
 import useScrollPosition from "../hooks/useScrollPosistion";
 import useWindowSize from "../hooks/useWindowSize";
 import styles from "../styles/Home.module.css";
@@ -31,19 +32,27 @@ export default function Home() {
         "/pic6.png",
     ];
 
+    return(
+        <div style={{
+            height: '400px',
+            width: '400px',
+            background: 'green',
+        }}>
+
+        </div>
+    )
+
     // console.log(Math.abs(scrollPosition - (yOffest + 0 * picHeight)) * 200 / height)
     return (
         <Fragment>
-
-<NextSeo
+            <NextSeo
                 title="Larnelle Art"
                 description="Tattoo Artist"
                 canonical="https://www"
                 openGraph={{
                     url: "https://www",
                     title: "Larnelle Art",
-                    description:
-                        "Tattoo Artist",
+                    description: "Tattoo Artist",
                     images: [
                         {
                             url: "/openg.png",
@@ -82,7 +91,7 @@ export default function Home() {
                     fontSize: "5.8vw",
                     fontWeight: "200",
                     lineHeight: "145%",
-                    zIndex: '1',
+                    zIndex: "1",
                 }}
             >
                 <div
@@ -270,21 +279,38 @@ export default function Home() {
                 </div>
 
                 <div
-                    className="hstack"
+                    className="vstack"
                     style={{
-                        width: "100vw",
-                        justifyContent: "center",
+                        justifyContent: "flex-end",
+                        marginTop: "20vw",
+                        marginBottom: "8vw",
                     }}
                 >
                     <div
+                        className="vstack"
                         style={{
-                            paddingBottom: "6vw",
-                            fontSize: "9vw",
-                            fontWeight: "200",
-                            zIndex: "3",
+                            paddingLeft: "2vw",
+                            position: "absolute",
+                            width: "100%",
                         }}
                     >
-                        FEATURED PIECES
+                        <div
+                            style={{
+                                fontSize: "15vw",
+                                fontWeight: "200",
+                                lineHeight: "96%",
+                            }}
+                        >
+                            FEATURED WORK
+                        </div>
+
+                        <div
+                            style={{
+                                width: "100%",
+                                height: "1px",
+                                background: "white",
+                            }}
+                        ></div>
                     </div>
                 </div>
                 {/* <div

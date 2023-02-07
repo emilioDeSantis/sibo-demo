@@ -90,10 +90,11 @@ button {
 }
 
 .nav-bar-text {
-    padding-left: 21vw;
-    padding-right: 21vw;
+    padding-left: 10vw;
+    padding-right: 30vw;
     padding-block: 5vw;
     font-size: 6vw;
+    font-weight: 300;
     /* font-family: "Roboto Mono"; */
     opacity: 0.5;
     transition: 0.2s ease;
