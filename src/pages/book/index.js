@@ -254,7 +254,7 @@ export default function Gallery() {
 A: Yes, getting a tattoo is safe when done by a professional tattoo artist using sterile equipment and following proper health and safety protocols.<br></br><br></br>
 
 Q: How do I choose a design?<br></br>
-A: You can choose a design from the tattoo artist's portfolio, bring in a picture or image for inspiration, or work with the artist to create a custom design.<br></br><br></br>
+A: You can choose a design from the tattoo artists portfolio, bring in a picture or image for inspiration, or work with the artist to create a custom design.<br></br><br></br>
 
 Q: What should I expect during the tattoo process?<br></br>
 A: During the tattoo process, you can expect the artist to clean and prepare the skin, outline the design, and fill in the tattoo with ink. The process can take anywhere from a few minutes to several hours, depending on the size and complexity of the design.<br></br><br></br>
