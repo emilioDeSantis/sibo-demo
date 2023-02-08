@@ -32,24 +32,24 @@ export default function Home() {
         "/pic6.png",
     ];
 
-    return (
-        <div
-            style={{
-                height: "140vw",
-                width: "80vw",
-                background: "green",
-            }}
-        >
-            <div
-                style={{
-                    marginInline: '10vw',
-                    height: "140vw",
-                    width: "100%",
-                    background: "red",
-                }}
-            ></div>
-        </div>
-    );
+    // return (
+    //     <div
+    //         style={{
+    //             height: "140vw",
+    //             width: "80vw",
+    //             background: "green",
+    //         }}
+    //     >
+    //         <div
+    //             style={{
+    //                 marginInline: '10vw',
+    //                 height: "140vw",
+    //                 width: "100%",
+    //                 background: "red",
+    //             }}
+    //         ></div>
+    //     </div>
+    // );
 
     // console.log(Math.abs(scrollPosition - (yOffest + 0 * picHeight)) * 200 / height)
     return (
