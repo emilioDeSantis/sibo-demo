@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ArrowButton from "../../components/ArrowButton";
+import Footer from "../../components/Footer";
 import Subtitle from "../../components/Subtitle";
 
 export default function About() {
@@ -236,6 +237,7 @@ export default function About() {
                     }}
                 />
             </div>
+                <Footer page="about"/>
         </div>
     );
 }

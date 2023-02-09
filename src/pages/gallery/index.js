@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ArrowButton from "../../components/ArrowButton";
+import Footer from "../../components/Footer";
 
 export default function Gallery() {
     const featured = [
@@ -173,6 +174,7 @@ export default function Gallery() {
                     );
                 })}
             </div>
+            <Footer page="gallery" />
         </div>
     );
 }
