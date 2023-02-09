@@ -105,6 +105,7 @@ export default function Footer({ page }) {
                             alt="test"
                             fill
                             sizes="40vw"
+                            priority
                             style={{
                                 objectFit: "cover",
                                 filter: "saturate(50%)",
@@ -524,6 +525,7 @@ export default function Footer({ page }) {
                             alt="test"
                             fill
                             sizes="40vw"
+                            priority
                             style={{
                                 objectFit: "cover",
                                 filter: "saturate(30%)",

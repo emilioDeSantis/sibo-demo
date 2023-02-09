@@ -165,6 +165,7 @@ export default function Header({ title, href, imageHeight, textOffset }) {
                     alt="test"
                     fill
                     sizes="100vw"
+                    priority
                     style={{
                         objectFit: "cover",
                     }}

@@ -72,6 +72,7 @@ export default function Tour() {
                         alt="test"
                         fill
                         sizes="100vw"
+                        priority
                         style={{
                             objectFit: "cover",
                         }}

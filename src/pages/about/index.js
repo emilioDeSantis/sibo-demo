@@ -66,6 +66,7 @@ export default function About() {
                     alt="test"
                     fill
                     sizes="100vw"
+                    priority
                     style={{
                         objectFit: "cover",
                     }}
@@ -96,6 +97,7 @@ export default function About() {
                     alt="test"
                     fill
                     sizes="100vw"
+                    priority
                     style={{
                         objectFit: "cover",
                     }}
@@ -134,6 +136,7 @@ export default function About() {
                     alt="test"
                     fill
                     sizes="100vw"
+                    priority
                     style={{
                         objectFit: "cover",
                     }}

@@ -19,6 +19,7 @@ export default function Subtitle({ text, href }) {
                     alt="test"
                     fill
                     sizes="100vw"
+                    priority
                     style={{
                         objectFit: "cover",
                         opacity: "40%",
