@@ -8,6 +8,12 @@ const navigationRoutes = ["home", "gallery", "tour", "book", "about",];
 export default function Navbar() {
     const [open, setOpen] = useState(false);
     const router = useRouter();
+    if (router.asPath == '/test') {
+
+        return (<></>)
+    }
+
+
     return (
         <Fragment>
             <header
