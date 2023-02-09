@@ -128,7 +128,7 @@ export default function Tour() {
                     </div>
                     {data.instagramUsernames.map((username) => {
                         return (
-                            <div className="hstack" style={{}}>
+                            <div className="hstack" style={{}} key={username}>
                                 <Link
                                     style={{
                                         fontWeight: "500",
