@@ -7,7 +7,7 @@ export default function Footer({ page }) {
             className="vstack"
             style={{
                 gap: "4vw",
-                marginTop: "12vw",
+                marginTop: "48vw",
             }}
         >
             {page != "gallery" && (

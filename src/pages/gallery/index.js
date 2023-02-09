@@ -35,7 +35,7 @@ export default function Gallery() {
                 style={{
                     width: "100vw",
                     justifyContent: "center",
-                    paddingTop: "15vw",
+                    paddingTop: "24vw",
                     // paddingBottom: "12vw",
                 }}
             >

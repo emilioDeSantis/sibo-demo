@@ -19,7 +19,7 @@ export default function About() {
                 style={{
                     width: "100vw",
                     justifyContent: "center",
-                    paddingTop: "6vw",
+                    paddingTop: "16vw",
                 }}
             >
                 <div
@@ -53,8 +53,7 @@ export default function About() {
 
             <div
                 style={{
-                    marginTop: "8vw",
-                    marginBottom: "8vw",
+                    marginTop: "24vw",
                     width: "100vw",
                     aspectRatio: "0.8",
                     position: "relative",
@@ -84,8 +83,7 @@ export default function About() {
 
             <div
                 style={{
-                    marginTop: "8vw",
-                    marginBottom: "8vw",
+                    marginTop: "24vw",
                     width: "100vw",
                     aspectRatio: "0.8",
                     position: "relative",
@@ -123,8 +121,7 @@ export default function About() {
 
             <div
                 style={{
-                    marginTop: "8vw",
-                    marginBottom: "8vw",
+                    marginTop: "24vw",
                     width: "100vw",
                     aspectRatio: "1.4",
                     position: "relative",

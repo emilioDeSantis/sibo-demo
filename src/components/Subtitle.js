@@ -4,7 +4,7 @@ export default function Subtitle({ text, href }) {
     return (
         <div className="vstack" style={{
             justifyContent: 'flex-end',
-            marginTop: '-10vw',
+            marginTop: '12vw',
         }}>
             <div
                 style={{

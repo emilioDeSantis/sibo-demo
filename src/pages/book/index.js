@@ -74,8 +74,7 @@ export default function Book() {
                 style={{
                     width: "100vw",
                     justifyContent: "center",
-                    paddingTop: "12vw",
-                    paddingBottom: "5vw",
+                    paddingTop: "32vw",
                 }}
             >
                 <ArrowButton name="TOUR" href="/tour" thin={true} />

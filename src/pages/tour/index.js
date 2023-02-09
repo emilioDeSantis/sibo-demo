@@ -87,7 +87,7 @@ export default function Tour() {
                             fontSize: "10vw",
                             textTransform: "uppercase",
                             lineHeight: "120%",
-                            marginTop: "8vw",
+                            marginTop: "18vw",
                         }}
                     >
                         {data.title}
@@ -97,7 +97,7 @@ export default function Tour() {
                             fontWeight: "400",
                             fontSize: "4vw",
                             lineHeight: "135%",
-                            marginTop: "6vw",
+                            marginTop: "8vw",
                         }}
                     >
                         {data.paragraph}
@@ -155,7 +155,7 @@ export default function Tour() {
                     })}
                     <div
                         style={{
-                            height: "6vw",
+                            height: "12vw",
                         }}
                     ></div>
                 </div>

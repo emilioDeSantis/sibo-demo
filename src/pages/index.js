@@ -217,13 +217,13 @@ export default function Home() {
                         style={{
                             width: "100vw",
                             justifyContent: "center",
-                            paddingTop: "16vw",
+                            paddingTop: "20vw",
                         }}
                     >
                         <div
                             style={{
                                 width: "80vw",
-                                paddingBottom: "12vw",
+                                paddingBottom: "18vw",
                                 fontSize: "5.2vw",
                                 fontWeight: "200",
                                 lineHeight: "180%",
@@ -243,11 +243,11 @@ export default function Home() {
                             alignItems: "center",
                         }}
                     >
-                        <ArrowButton name="GALLERY" href="/gallery" />
-                        <ArrowButton name="TOUR" href="/tour" />
-                        <ArrowButton name="BOOK" href="/book" />
-                        <ArrowButton name="ABOUT" href="/about" />
-                        <ArrowButton
+                        <ArrowButton name="GALLERY" href="/gallery" thin={true}/>
+                        <ArrowButton name="TOUR" href="/tour" thin={true} />
+                        <ArrowButton name="BOOK" href="/book"  thin={true}/>
+                        <ArrowButton name="ABOUT" href="/about" thin={true} />
+                        <ArrowButton thin={true}
                             name="MUZEOM"
                             href="https://www.instagram.com/the_muzeom/"
                         />
@@ -264,7 +264,7 @@ export default function Home() {
                     className="vstack"
                     style={{
                         justifyContent: "flex-end",
-                        marginTop: "20vw",
+                        marginTop: "36vw",
                         marginBottom: "8vw",
                     }}
                 >
