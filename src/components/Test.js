@@ -32,6 +32,7 @@ export default function Test({}) {
             {array.map((i) => {
                 return (
                     <div
+                        key = {i}
                         className="hstack"
                         style={{
                             position: "absolute",
