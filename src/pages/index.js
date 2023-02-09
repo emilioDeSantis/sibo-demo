@@ -12,19 +12,8 @@ import useWindowSize from "../hooks/useWindowSize";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
-    const scrollPosition = useScrollPosition();
 
-    const [yOffest, setYOffset] = useState(1);
-    const [picHeight, setPicHeight] = useState(1);
 
-    // const yOffest = useWindowSize().width * 3.4;
-    // const picHeight = useWindowSize().width * 1.3;
-    const { height, width } = useWindowSize();
-
-    useEffect(() => {
-        setYOffset(width * 3.8);
-        setPicHeight(width * 1.3);
-    }, [width]);
     const featured = [
         "/pic1.png",
         "/pic2.png",
@@ -168,7 +157,7 @@ export default function Home() {
                 <div
                     style={{
                         width: "100vw",
-                        aspectRatio: "734/1024",
+                        height: 1024/734 * 100 + "vw",
                         position: "relative",
                         overflow: "hidden",
                         marginTop: "32vw",
@@ -186,14 +175,14 @@ export default function Home() {
                         }}
                     />
                 </div>
-                {/* <div
+                <div
                     style={{
                         width: "100vw",
-                        height: "0.3px",
-                        background: "#D197FF",
+                        height: "1px",
+                        background: "white",
                         zIndex: "3",
                     }}
-                /> */}
+                />
                 <div
                     className="vstack"
                     style={{
@@ -306,68 +295,6 @@ export default function Home() {
                         ></div>
                     </div>
                 </div>
-                {/* <div
-                    style={{
-                        position: "sticky",
-                        top: "36vw",
-                        zIndex: "2",
-                        marginTop: "5vw",
-                    }}
-                >
-                    <div
-                        className="vstack"
-                        style={{
-                            justifyContent: "space-between",
-                            height: "120vw",
-                            width: "100vw",
-                            padding: "3vw",
-                            position: "absolute",
-                        }}
-                    >
-                        <div
-                            className="hstack"
-                            style={{ justifyContent: "space-between" }}
-                        >
-                            <div
-                                style={{
-                                    borderTop: "1px solid rgba(12,209,145,1)",
-                                    borderLeft: "1px solid rgba(12,209,145,1)",
-                                    width: "15vw",
-                                    aspectRatio: 1,
-                                }}
-                            />
-                            <div
-                                style={{
-                                    borderTop: "1px solid rgba(12,209,145,1)",
-                                    borderRight: "1px solid rgba(12,209,145,1)",
-                                    width: "15vw",
-                                    aspectRatio: 1,
-                                }}
-                            />
-                        </div>
-                        <div
-                            className="hstack"
-                            style={{ justifyContent: "space-between" }}
-                        >
-                            <div
-                                style={{
-                                    borderBottom: "1px solid rgba(12,209,145,1)",
-                                    borderLeft: "1px solid rgba(12,209,145,1)",
-                                    width: "15vw",
-                                    aspectRatio: 1,
-                                }}
-                            />
-                            <div
-                                style={{
-                                    borderBottom: "1px solid rgba(12,209,145,1)",
-                                    borderRight: "1px solid rgba(12,209,145,1)",
-                                    width: "15vw",
-                                    aspectRatio: 1,
-                                }}
-                            />
-                        </div>
-                    </div>
-                </div> */}
                 {featured.map((href, index) => {
                     return (
                         <div
@@ -375,7 +302,7 @@ export default function Home() {
                             className="hstack"
                             style={{
                                 width: "100vw",
-                                height: picHeight + "px",
+                                height: "130vw",
                                 justifyContent: "center",
                                 alignItems: "center",
                                 paddingBlock: "2vw",
@@ -385,7 +312,6 @@ export default function Home() {
                                 style={{
                                     height: "100%",
                                     width: "100%",
-                                    aspectRatio: "0.8",
                                     position: "relative",
                                     overflow: "hidden",
                                     // transform: `scale(${Math.min(100,(100 - (Math.abs(scrollPosition - (yOffest + index * picHeight)) * 100 / height)))}%)`,
@@ -399,41 +325,8 @@ export default function Home() {
                                     priority
                                     style={{
                                         objectFit: "cover",
-                                        // opacity:
-                                        //     100 -
-                                        //     Math.pow(
-                                        //         (Math.abs(
-                                        //             scrollPosition -
-                                        //                 (yOffest +
-                                        //                     index * picHeight)
-                                        //         ) *
-                                        //             1.3) /
-                                        //             height,
-                                        //         2
-                                        //     ) *
-                                        //         100 +
-                                        //     "%",
                                     }}
                                 />
-                                {/* <div
-                                    style={{
-                                        height: "100%",
-                                        width: "100%",
-                                        // background:
-                                        //     scrollPosition > (yOffest + index * picHeight)? 'red' : 'blue',
-                                        background: `rgba(0,0,0,${Math.pow(
-                                            (Math.abs(
-                                                scrollPosition -
-                                                    (yOffest +
-                                                        index * picHeight)
-                                            ) *
-                                                1.3) /
-                                                height,
-                                            2
-                                        )})`,
-                                        position: "absolute",
-                                    }}
-                                ></div> */}
                             </div>
                         </div>
                     );

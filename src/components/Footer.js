@@ -7,7 +7,7 @@ export default function Footer({ page }) {
             className="vstack"
             style={{
                 gap: "4vw",
-                marginTop: '12vw',
+                marginTop: "12vw",
             }}
         >
             {page != "gallery" && (
@@ -17,14 +17,12 @@ export default function Footer({ page }) {
                         display: "flex",
                         justifyContent: "flex-end",
                         alignItems: "flex-end",
+                        marginTop: "0vw",
                     }}
                 >
                     <div
                         className="vstack"
                         style={{
-                            marginLeft: "-18vw",
-                            // marginTop: 20 + scrollPosition / 40 + "vw",
-                            marginTop: "20vw",
                             position: "absolute",
                             width: "118vw",
                             color: "#2C2A2E",
@@ -96,7 +94,7 @@ export default function Footer({ page }) {
                     <div
                         style={{
                             height: "43vw",
-                            aspectRatio: "1",
+                            width: "43vw",
                             position: "relative",
                             overflow: "hidden",
                             zIndex: "2",
@@ -120,13 +118,122 @@ export default function Footer({ page }) {
                     href="tour"
                     style={{
                         display: "flex",
+                        justifyContent: "flex-end",
                         alignItems: "flex-end",
+                        marginTop: "0vw",
                     }}
                 >
                     <div
                         className="vstack"
                         style={{
-                            marginLeft: "-18vw",
+                            position: "absolute",
+                            width: "118vw",
+                            color: "#2C2A2E",
+                            fontSize: "10.5vw",
+                            fontWeight: "700",
+                            lineHeight: "70%",
+                            zIndex: "1",
+                            textAlign: "center",
+                            gap: "0.6vw",
+                        }}
+                    >
+                        <div
+                            style={{
+                                whiteSpace: "nowrap",
+                                overflow: "hidden",
+                            }}
+                        >
+                            TOUR TOUR TOUR TOUR TOUR TOUR TOUR TOUR
+                        </div>
+                        <div
+                            style={{
+                                whiteSpace: "nowrap",
+                                overflow: "hidden",
+                                transform: "rotate(180deg)",
+                            }}
+                        >
+                            TOUR TOUR TOUR TOUR TOUR TOUR TOUR TOUR
+                        </div>
+                        <div
+                            style={{
+                                whiteSpace: "nowrap",
+                                overflow: "hidden",
+                            }}
+                        >
+                            OR TOUR TOUR
+                            <b
+                                style={{
+                                    color: "#fff",
+                                }}
+                            >
+                                {" "}
+                                TOUR{" "}
+                            </b>
+                            TOUR TOUR TOUR TOUR TOUR TOUR TOUR TOUR
+                        </div>
+                        <div
+                            style={{
+                                whiteSpace: "nowrap",
+                                overflow: "hidden",
+                                transform: "rotate(180deg)",
+                            }}
+                        >
+                            R TOUR TOUR TOUR TOUR TOUR TOUR TOUR
+                        </div>
+                        <div
+                            style={{
+                                whiteSpace: "nowrap",
+                                overflow: "hidden",
+                            }}
+                        >
+                            UR TOUR TOUR TOUR TOUR TOUR TOUR TOUR
+                        </div>
+                    </div>
+                    <div
+                        className="hstack"
+                        style={{
+                            width: "100vw",
+                        }}
+                    >
+                        <div
+                            style={{
+                                // marginTop: "15vw",
+                                marginLeft: "1vw",
+                                height: "43vw",
+                                width: (298 / 266) * 43 + "vw",
+                                position: "relative",
+                                overflow: "hidden",
+                                zIndex: "2",
+                            }}
+                        >
+                            <Image
+                                src="/malebust.png"
+                                alt="test"
+                                fill
+                                sizes="40vw"
+                                priority
+                                style={{
+                                    objectFit: "cover",
+                                    filter: "saturate(50%)",
+                                }}
+                            />
+                        </div>
+                    </div>
+                </Link>
+            )}
+            {/* {page != "tour" && (
+                <Link
+                    href="tour"
+                    style={{
+                        display: "flex",
+                        alignItems: "end",
+                        overflow: "hidden",
+                        width: "100vw",
+                    }}
+                >
+                    <div
+                        className="vstack"
+                        style={{
                             marginTop: "20vw",
                             position: "absolute",
                             width: "118vw",
@@ -194,8 +301,7 @@ export default function Footer({ page }) {
                     <div
                         style={{
                             height: "43vw",
-                            marginLeft: "1vw",
-                            aspectRatio: "298/266",
+                            width: (298 / 266) * 43 + "vw",
                             position: "relative",
                             overflow: "hidden",
                             zIndex: "2",
@@ -213,20 +319,21 @@ export default function Footer({ page }) {
                         />
                     </div>
                 </Link>
-            )}
+            )} */}
+
             {page != "book" && (
                 <Link
                     href="book"
                     style={{
                         display: "flex",
+                        justifyContent: "flex-end",
                         alignItems: "flex-end",
+                        marginTop: "0vw",
                     }}
                 >
                     <div
                         className="vstack"
                         style={{
-                            marginLeft: "-18vw",
-                            marginTop: "20vw",
                             position: "absolute",
                             width: "118vw",
                             color: "#2C2A2E",
@@ -291,25 +398,34 @@ export default function Footer({ page }) {
                         </div>
                     </div>
                     <div
+                        className="hstack"
                         style={{
-                            marginLeft: "5vw",
-                            height: "43vw",
-                            aspectRatio: "1",
-                            position: "relative",
-                            overflow: "hidden",
-                            zIndex: "2",
+                            width: "100vw",
                         }}
                     >
-                        <Image
-                            src="/bust-with-beard 1.png"
-                            alt="test"
-                            fill
-                            sizes="40vw"
+                        <div
                             style={{
-                                objectFit: "cover",
-                                filter: "saturate(60%)",
+                                // marginTop: "15vw",
+                                marginLeft: "5vw",
+                                height: "43vw",
+                                width: "43vw",
+                                position: "relative",
+                                overflow: "hidden",
+                                zIndex: "2",
                             }}
-                        />
+                        >
+                            <Image
+                                src="/bust-with-beard 1.png"
+                                alt="test"
+                                fill
+                                sizes="40vw"
+                                priority
+                                style={{
+                                    objectFit: "cover",
+                                    filter: "saturate(50%)",
+                                }}
+                            />
+                        </div>
                     </div>
                 </Link>
             )}
@@ -320,14 +436,12 @@ export default function Footer({ page }) {
                         display: "flex",
                         justifyContent: "flex-end",
                         alignItems: "flex-end",
+                        marginTop: "0vw",
                     }}
                 >
                     <div
                         className="vstack"
                         style={{
-                            marginLeft: "-18vw",
-                            // marginTop: 20 + scrollPosition / 40 + "vw",
-                            marginTop: "20vw",
                             position: "absolute",
                             width: "118vw",
                             color: "#2C2A2E",
@@ -399,7 +513,7 @@ export default function Footer({ page }) {
                     <div
                         style={{
                             height: "43vw",
-                            aspectRatio: "1",
+                            width: "43vw",
                             position: "relative",
                             overflow: "hidden",
                             zIndex: "2",
@@ -422,7 +536,7 @@ export default function Footer({ page }) {
             <div
                 className="vstack"
                 style={{
-                    marginTop: '4vw',
+                    marginTop: "4vw",
                     background: "#2C2A2E",
                 }}
             >
@@ -533,9 +647,9 @@ export default function Footer({ page }) {
                     className="hstack"
                     style={{
                         marginTop: "8vw",
-                        marginBottom: '2vw',
+                        marginBottom: "2vw",
                         justifyContent: "center",
-                        opacity: '50%',
+                        opacity: "50%",
                     }}
                 >
                     <div
@@ -545,7 +659,7 @@ export default function Footer({ page }) {
                             textAlign: "center",
                         }}
                     >
-                        ©Larnelle Art 2023  |  site by
+                        ©Larnelle Art 2023 | site by
                     </div>
                     <Link
                         href="https://www.instagram.com/ui_design_studio_/"
@@ -553,7 +667,7 @@ export default function Footer({ page }) {
                             fontSize: "3vw",
                             fontWeight: "300",
                             textAlign: "center",
-                            textDecoration: 'underline',
+                            textDecoration: "underline",
                         }}
                     >
                         Ui Design Studio

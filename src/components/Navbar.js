@@ -32,7 +32,7 @@ export default function Navbar() {
                     <div
                         style={{
                             height: "10vw",
-                            aspectRatio: "4",
+                            width: "40vw",
                             position: "relative",
                             overflow: "hidden",
                             transform: 'translate(0,-1vw)',
@@ -143,7 +143,7 @@ export default function Navbar() {
                     height: "100vh",
                     transition: "0.3s all ease",
                     transform: open ? "translateX(0)" : "translateX(100vw)",
-                    alignItems: "end",
+                    alignItems: "flex-end",
                 }}
             >
                 <button

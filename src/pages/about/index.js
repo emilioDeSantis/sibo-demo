@@ -1,134 +1,39 @@
 import Image from "next/image";
 import ArrowButton from "../../components/ArrowButton";
 import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 import Subtitle from "../../components/Subtitle";
 
 export default function About() {
     return (
         <div className="vstack" style={{}}>
+            <Header
+                title={"ABOUT"}
+                href={"/larnelle1.png"}
+                textOffset={9}
+                imageHeight="124.5vw"
+            />
+
             <div
-                className="vstack"
+                className="hstack"
                 style={{
-                    marginLeft: "-18vw",
-                    // marginTop: 20 + scrollPosition / 40 + "vw",
-                    marginTop: "20vw",
-                    position: "absolute",
-                    width: "118vw",
-                    color: "#D197FF29",
-                    fontSize: "10.5vw",
-                    fontWeight: "700",
-                    lineHeight: "70%",
-                    zIndex: "1",
-                    textAlign: "center",
-                    gap: "0.6vw",
+                    width: "100vw",
+                    justifyContent: "center",
+                    paddingTop: "6vw",
                 }}
             >
                 <div
                     style={{
-                        whiteSpace: "nowrap",
-                        overflow: "hidden",
+                        width: "80vw",
+                        fontSize: "5.2vw",
+                        fontWeight: "200",
+                        lineHeight: "180%",
+                        zIndex: "3",
                     }}
                 >
-                    ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT
-                    ABOUT
-                </div>
-                <div
-                    style={{
-                        whiteSpace: "nowrap",
-                        overflow: "hidden",
-                        transform: "rotate(180deg)",
-                    }}
-                >
-                    ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT
-                    ABOUT
-                </div>
-                <div
-                    style={{
-                        whiteSpace: "nowrap",
-                        overflow: "hidden",
-                    }}
-                >
-                    OUT
-                    <b
-                        style={{
-                            color: "#fff",
-                        }}
-                    >
-                        {" "}
-                        ABOUT{" "}
-                    </b>
-                    ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT
-                    ABOUT
-                </div>
-                <div
-                    style={{
-                        whiteSpace: "nowrap",
-                        overflow: "hidden",
-                        transform: "rotate(180deg)",
-                    }}
-                >
-                    OUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT
-                    ABOUT
-                </div>
-                <div
-                    style={{
-                        whiteSpace: "nowrap",
-                        overflow: "hidden",
-                    }}
-                >
-                    T ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT
-                </div>
-            </div>
-
-            <div className="vstack">
-                <div
-                    style={{
-                        width: "100vw",
-                        aspectRatio: "734/1024",
-                        position: "relative",
-                        overflow: "hidden",
-                        zIndex: "2",
-                    }}
-                >
-                    <Image
-                        src="/larnelle1.png"
-                        alt="test"
-                        fill
-                        sizes="100vw"
-                        priority
-                        style={{
-                            objectFit: "cover",
-                        }}
-                    />
-                </div>
-                <div
-                    className="vstack"
-                    style={{
-                        width: "100vw",
-                    }}
-                >
-                    <div
-                        className="hstack"
-                        style={{
-                            width: "100vw",
-                            justifyContent: "center",
-                            paddingTop: "6vw",
-                        }}
-                    >
-                        <div
-                            style={{
-                                width: "80vw",
-                                fontSize: "5.2vw",
-                                fontWeight: "200",
-                                lineHeight: "180%",
-                                zIndex: "3",
-                            }}
-                        >
-                            {
-                                '“A tattoo is a true poetic creation, and is always more than meets the eye."'
-                            }
-                        </div>
-                    </div>
+                    {
+                        '“A tattoo is a true poetic creation, and is always more than meets the eye."'
+                    }
                 </div>
             </div>
 
@@ -154,7 +59,7 @@ export default function About() {
                     aspectRatio: "0.8",
                     position: "relative",
                     overflow: "hidden",
-                    zIndex: '2',
+                    zIndex: "2",
                 }}
             >
                 <Image
@@ -185,7 +90,7 @@ export default function About() {
                     aspectRatio: "0.8",
                     position: "relative",
                     overflow: "hidden",
-                    zIndex: '2',
+                    zIndex: "2",
                 }}
             >
                 <Image
@@ -224,7 +129,7 @@ export default function About() {
                     aspectRatio: "1.4",
                     position: "relative",
                     overflow: "hidden",
-                    zIndex: '2',
+                    zIndex: "2",
                 }}
             >
                 <Image
@@ -237,7 +142,7 @@ export default function About() {
                     }}
                 />
             </div>
-                <Footer page="about"/>
+            <Footer page="about" />
         </div>
     );
 }

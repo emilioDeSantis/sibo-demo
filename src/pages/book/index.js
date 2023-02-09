@@ -1,110 +1,13 @@
 import Image from "next/image";
 import ArrowButton from "../../components/ArrowButton";
 import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 import Subtitle from "../../components/Subtitle";
 
-export default function Gallery() {
+export default function Book() {
     return (
         <div className="vstack">
-            <div
-                style={{
-                    display: "flex",
-                    // justifyContent: "flex-end",
-                    alignItems: "flex-end",
-                }}
-            >
-                <div
-                    className="vstack"
-                    style={{
-                        marginLeft: "-18vw",
-                        // marginTop: 20 + scrollPosition / 40 + "vw",
-                        marginTop: "20vw",
-                        position: "absolute",
-                        width: "118vw",
-                        color: "#D197FF29",
-                        fontSize: "10.5vw",
-                        fontWeight: "700",
-                        lineHeight: "70%",
-                        zIndex: "1",
-                        textAlign: "center",
-                        gap: "0.6vw",
-                    }}
-                >
-                    <div
-                        style={{
-                            whiteSpace: "nowrap",
-                            overflow: "hidden",
-                        }}
-                    >
-                        BOOK BOOK BOOK BOOK BOOK BOOK BOOK BOOK
-                    </div>
-                    <div
-                        style={{
-                            whiteSpace: "nowrap",
-                            overflow: "hidden",
-                            transform: "rotate(180deg)",
-                        }}
-                    >
-                        BOOK BOOK BOOK BOOK BOOK BOOK BOOK BOOK
-                    </div>
-                    <div
-                        style={{
-                            whiteSpace: "nowrap",
-                            overflow: "hidden",
-                        }}
-                    >
-                        K BOOK BOOK
-                        <b
-                            style={{
-                                color: "#fff",
-                            }}
-                        >
-                            {" "}
-                            BOOK{" "}
-                        </b>
-                        BOOK BOOK BOOK BOOK BOOK BOOK BOOK BOOK
-                    </div>
-                    <div
-                        style={{
-                            whiteSpace: "nowrap",
-                            overflow: "hidden",
-                            transform: "rotate(180deg)",
-                        }}
-                    >
-                        K BOOK BOOK BOOK BOOK BOOK BOOK BOOK
-                    </div>
-                    <div
-                        style={{
-                            whiteSpace: "nowrap",
-                            overflow: "hidden",
-                        }}
-                    >
-                        OK BOOK BOOK BOOK BOOK BOOK BOOK
-                    </div>
-                </div>
-                <div
-                    style={{
-                        marginTop: "15vw",
-                        marginLeft: "5vw",
-                        height: "43vw",
-                        aspectRatio: "1",
-                        position: "relative",
-                        overflow: "hidden",
-                        zIndex: "2",
-                    }}
-                >
-                    <Image
-                        src="/bust-with-beard 1.png"
-                        alt="test"
-                        fill
-                        sizes="40vw"
-                        priority
-                        style={{
-                            objectFit: "cover",
-                        }}
-                    />
-                </div>
-            </div>
+            <Header title={'BOOK'} href={"/bust-with-beard 2.png"} textOffset={75} imageHeight="82.35vw"/>
             <p className="paragrapgh" style={{}}>
                 To book an appointment with Larnelle, you can reach out via
                 Instagram or send an email.

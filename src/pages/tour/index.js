@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 import ArrowButton from "../../components/ArrowButton";
 import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 
 export default function Tour() {
     // useEffect(() => {
@@ -51,6 +52,12 @@ export default function Tour() {
     };
     return (
         <div className="vstack" style={{}}>
+            <Header
+                title={"TOUR"}
+                href={"/male-bust 2.png"}
+                textOffset={32}
+                imageHeight="82.35vw"
+            />
             <div className="vstack" style={{ position: "relative" }}>
                 <div
                     style={{
