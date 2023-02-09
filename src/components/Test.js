@@ -21,7 +21,7 @@ export default function Test({}) {
         setDistance(d);
         setXComp(dx / d);
         setYComp(dy / d);
-    }, [mousePosition]);
+    }, [mousePosition, windowSize]);
     return (
         <div
             style={{
