@@ -4,52 +4,47 @@ import { useEffect } from "react";
 import ArrowButton from "../../components/ArrowButton";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import { getTour } from "../../firebase/database";
 
-export default function Tour() {
-    // useEffect(() => {
-    //     return () => {
-    //         getPhoto("larnelle.art");
-    //     };
-    // }, []);
+export const getServerSideProps = async (context) => {
+    try {
+        let tour = await getTour();
 
-    function getPhoto(a) {
-        // validation for instagram usernames
-        var regex = new RegExp(/^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$/);
-        var validation = regex.test(a);
+        tour.date = new Date(tour.startDate).toLocaleString("en-ZA", {
+            month: "long",
+            year: "numeric",
+        });
 
-        if (validation) {
-            // $.get("https://www.instagram.com/"+a+"/?__a=1")
-            $.get("https://www.instagram.com/larnelle.art?__a=1/")
-                .done(function (data) {
-                    // getting the url
-                    var photoURL =
-                        data["graphql"]["user"]["profile_pic_url_hd"];
+        tour.startDate = new Date(tour.startDate)
+            .toLocaleDateString("en-ZA", {
+                month: "2-digit",
+                day: "2-digit",
+            })
+            .replace(/\//g, "/");
 
-                    // update img element
-                    console.log(photoURL);
-                })
-                .fail(function () {
-                    // code for 404 error
-                    alert("Username was not found!");
-                });
-        } else {
-            alert("The username is invalid!");
-        }
+        tour.endDate = new Date(tour.endDate)
+            .toLocaleDateString("en-ZA", {
+                day: "2-digit",
+                month: "2-digit",
+            })
+            .replace(/\//g, "/");
+
+        return {
+            props: {
+                data: JSON.parse(JSON.stringify(tour)),
+            },
+        };
+    } catch (error) {
+        console.log(error);
+
+        return {
+            props: {},
+            notFound: false,
+        };
     }
+};
 
-    const data = {
-        title: "Mozambique Tattoo Tour",
-        startDate: "date",
-        endDate: "date",
-        instagramUsernames: [
-            "larnelle.art",
-            "mattie_tattoo",
-            "brooklynnmancer",
-        ],
-        image: "/tour.png",
-        paragraph:
-            "WE ARE BRINGING THE WHOLE TEAM!!!! AGAIN! 16th February - 25th February 2023. SPACE IS LIMITED Bookings are ESSENTIAL, do not miss out on getting inked by any one of our talented artists this trip!!",
-    };
+export default function Tour({ data }) {
     return (
         <div className="vstack" style={{}}>
             <Header
@@ -68,7 +63,7 @@ export default function Tour() {
                     }}
                 >
                     <Image
-                        src="/tour background.png"
+                        src={data.background}
                         alt="test"
                         fill
                         sizes="100vw"
@@ -101,7 +96,7 @@ export default function Tour() {
                             marginTop: "8vw",
                         }}
                     >
-                        {data.paragraph}
+                        {data.description}
                     </div>
                     <div
                         style={{
@@ -112,7 +107,7 @@ export default function Tour() {
                             marginTop: "18vw",
                         }}
                     >
-                        FEBRUARY 2023
+                        {data.date}
                     </div>
                     <div
                         style={{
@@ -122,7 +117,7 @@ export default function Tour() {
                             marginTop: "2vw",
                         }}
                     >
-                        16/02/23 - 25/02/23
+                        {data.startDate} - {data.endDate}
                     </div>
                     <div
                         style={{
@@ -134,7 +129,7 @@ export default function Tour() {
                     >
                         ARTISTS
                     </div>
-                    {data.instagramUsernames.map((username) => {
+                    {data.artists.map((username) => {
                         return (
                             <div className="hstack" style={{}} key={username}>
                                 <Link
@@ -162,7 +157,7 @@ export default function Tour() {
                 </div>
                 <div
                     style={{
-                        height: "0.3px",
+                        height: "1px",
                         width: "100vw",
                         background: "white",
                         zIndex: 3,

@@ -2,28 +2,29 @@ import Image from "next/image";
 import ArrowButton from "../../components/ArrowButton";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import { getImages } from "../../firebase/database";
 
-export default function Gallery() {
-    const featured = [
-        "/pic1.png",
-        "/pic2.png",
-        "/pic3.png",
-        "/pic4.png",
-        "/pic5.png",
-        "/pic6.png",
-        "/pic1.png",
-        "/pic2.png",
-        "/pic3.png",
-        "/pic4.png",
-        "/pic5.png",
-        "/pic6.png",
-        "/pic1.png",
-        "/pic2.png",
-        "/pic3.png",
-        "/pic4.png",
-        "/pic5.png",
-        "/pic6.png",
-    ];
+export const getServerSideProps = async (context) => {
+    try {
+        const images = await getImages()
+        return {props:{
+            images: JSON.parse(JSON.stringify(images))
+        
+        }}
+    } 
+    catch (error) {
+        console.log(error);
+
+        return {
+            props: {},
+            notFound: false,
+        }
+    }
+}
+
+
+export default function Gallery({images}) {
+console.log(images);
     return (
         <div className="vstack">
 
@@ -50,10 +51,12 @@ export default function Gallery() {
                     columnGap: "2vw",
                 }}
             >
-                {featured.map((href, index) => {
+                {images.sort((a,b) => {
+                    return b.uploadDate.seconds - a.uploadDate.seconds
+                }).map((image, index) => {
                     return (
                         <div
-                            key={href}
+                            key={image.id}
                             style={{
                                 width: "auto",
                                 height: "47vw",
@@ -62,7 +65,7 @@ export default function Gallery() {
                             }}
                         >
                             <Image
-                                src={href}
+                                src={image.src}
                                 alt="test"
                                 fill
                                 sizes="100vw"

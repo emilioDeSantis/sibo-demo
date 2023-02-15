@@ -7,22 +7,30 @@ import ArrowButton from "../components/ArrowButton";
 import Footer from "../components/Footer";
 import Subtitle from "../components/Subtitle";
 import Test from "../components/Test";
+import { getImages } from "../firebase/database";
 import useScrollPosition from "../hooks/useScrollPosistion";
 import useWindowSize from "../hooks/useWindowSize";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export const getServerSideProps = async (context) => {
+    try {
+        const images = await getImages();
+        return {
+            props: {
+                images: JSON.parse(JSON.stringify(images)),
+            },
+        };
+    } catch (error) {
+        console.log(error);
 
+        return {
+            props: {},
+            notFound: false,
+        };
+    }
+};
 
-    const featured = [
-        "/pic1.png",
-        "/pic2.png",
-        "/pic3.png",
-        "/pic4.png",
-        "/pic5.png",
-        "/pic6.png",
-    ];
-
+export default function Home({images}) {
 
     // console.log(Math.abs(scrollPosition - (yOffest + 0 * picHeight)) * 200 / height)
     return (
@@ -157,7 +165,7 @@ export default function Home() {
                 <div
                     style={{
                         width: "100vw",
-                        height: 1024/734 * 100 + "vw",
+                        height: (1024 / 734) * 100 + "vw",
                         position: "relative",
                         overflow: "hidden",
                         marginTop: "32vw",
@@ -243,11 +251,16 @@ export default function Home() {
                             alignItems: "center",
                         }}
                     >
-                        <ArrowButton name="GALLERY" href="/gallery" thin={true}/>
+                        <ArrowButton
+                            name="GALLERY"
+                            href="/gallery"
+                            thin={true}
+                        />
                         <ArrowButton name="TOUR" href="/tour" thin={true} />
-                        <ArrowButton name="BOOK" href="/book"  thin={true}/>
+                        <ArrowButton name="BOOK" href="/book" thin={true} />
                         <ArrowButton name="ABOUT" href="/about" thin={true} />
-                        <ArrowButton thin={true}
+                        <ArrowButton
+                            thin={true}
                             name="MUZEOM"
                             href="https://www.instagram.com/the_muzeom/"
                         />
@@ -295,43 +308,48 @@ export default function Home() {
                         ></div>
                     </div>
                 </div>
-                {featured.map((href, index) => {
-                    return (
-                        <div
-                            key={href}
-                            className="hstack"
-                            style={{
-                                width: "100vw",
-                                height: "130vw",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                paddingBlock: "2vw",
-                            }}
-                        >
+                {images
+                    .filter((image) => image.isFeatured)
+                    .sort((a, b) => {
+                        return b.uploadDate.seconds - a.uploadDate.seconds;
+                    })
+                    .map((image, index) => {
+                        return (
                             <div
+                                key={image.id}
+                                className="hstack"
                                 style={{
-                                    height: "100%",
-                                    width: "100%",
-                                    position: "relative",
-                                    overflow: "hidden",
-                                    // transform: `scale(${Math.min(100,(100 - (Math.abs(scrollPosition - (yOffest + index * picHeight)) * 100 / height)))}%)`,
+                                    width: "100vw",
+                                    height: "130vw",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    paddingBlock: "2vw",
                                 }}
                             >
-                                <Image
-                                    src={href}
-                                    alt="test"
-                                    fill
-                                    sizes="100vw"
-                                    priority
+                                <div
                                     style={{
-                                        objectFit: "cover",
+                                        height: "100%",
+                                        width: "100%",
+                                        position: "relative",
+                                        overflow: "hidden",
+                                        // transform: `scale(${Math.min(100,(100 - (Math.abs(scrollPosition - (yOffest + index * picHeight)) * 100 / height)))}%)`,
                                     }}
-                                />
+                                >
+                                    <Image
+                                        src={image.src}
+                                        alt="test"
+                                        fill
+                                        sizes="100vw"
+                                        priority
+                                        style={{
+                                            objectFit: "cover",
+                                        }}
+                                    />
+                                </div>
                             </div>
-                        </div>
-                    );
-                })}
-                <Footer page=""/>
+                        );
+                    })}
+                <Footer page="" />
             </div>
         </Fragment>
     );
