@@ -669,7 +669,7 @@ function MyForm({ tour }) {
             />
 
             <label htmlFor="artists" style={{ marginBottom: "2vw" }}>
-                Artists' instagram usernames (separated by commas):
+                {"Artists' instagram usernames (separated by commas):"}
             </label>
             <input
                 type="text"
