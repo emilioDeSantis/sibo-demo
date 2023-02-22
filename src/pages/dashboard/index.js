@@ -40,18 +40,15 @@ export default function Dashboard({ imagesArray, tour }) {
     const [numFilesSelected, setNumFilesSelected] = useState(0);
 
     function handleFileSelect(e) {
-      setNumFilesSelected(e.target.files.length);
-
+        setNumFilesSelected(e.target.files.length);
     }
-
-
 
     const [images, setImages] = useState(imagesArray);
 
     const [n, setN] = useState(1);
     console.log(tour);
     async function handleAddImages(e) {
-        handleFileSelect(e)
+        handleFileSelect(e);
         const files = e.target.files;
 
         for (let i = 0; i < files.length; i++) {
@@ -59,9 +56,9 @@ export default function Dashboard({ imagesArray, tour }) {
             const fileName = file.name + file.lastModified;
             const url = await uploadFileToFirebase(file, fileName);
             await addImage(url, fileName);
-            setN((prevN => prevN + 1))
+            setN((prevN) => prevN + 1);
         }
-        location.reload()
+        location.reload();
     }
 
     async function handleDeleteImage(image) {
@@ -77,15 +74,14 @@ export default function Dashboard({ imagesArray, tour }) {
         }
     }
 
-
     async function handleToggle(imageId) {
         try {
             await toggleImageFeaturedStatus(imageId);
-            let updatedImages = images.map(image => {
+            let updatedImages = images.map((image) => {
                 if (image.id === imageId) {
                     return {
                         ...image,
-                        isFeatured: !image.isFeatured
+                        isFeatured: !image.isFeatured,
                     };
                 }
                 return image;
@@ -95,7 +91,6 @@ export default function Dashboard({ imagesArray, tour }) {
             console.error("Error toggling image:", error);
         }
     }
-    
 
     return (
         <div
@@ -106,19 +101,26 @@ export default function Dashboard({ imagesArray, tour }) {
         >
             <MyForm tour={tour} />
 
-            <label htmlFor="title" style={{ marginBottom: "2vw",
-                    marginTop: "24vw",
-                    padding: "2vw", }}>
-                GALLERY:
-            </label>
-            {numFilesSelected > 0 && <label
+            <label
+                htmlFor="title"
                 style={{
+                    marginBottom: "2vw",
+                    marginTop: "24vw",
                     padding: "2vw",
-                    fontSize: '10vw'
                 }}
             >
-                uploading {n} / {numFilesSelected}
-            </label>}
+                GALLERY:
+            </label>
+            {numFilesSelected > 0 && (
+                <label
+                    style={{
+                        padding: "2vw",
+                        fontSize: "10vw",
+                    }}
+                >
+                    uploading {n} / {numFilesSelected}
+                </label>
+            )}
             <label
                 style={{
                     padding: "2vw",
@@ -135,10 +137,11 @@ export default function Dashboard({ imagesArray, tour }) {
                 onChange={handleAddImages}
             />
 
-            {images.slice(0, 6)
+            {images
                 .sort((a, b) => {
                     return b.uploadDate.seconds - a.uploadDate.seconds;
                 })
+                .slice(0, 6)
                 .map((image, index) => {
                     return (
                         <div className="hstack" style={{}} key={image.id}>
@@ -154,11 +157,11 @@ export default function Dashboard({ imagesArray, tour }) {
                                     src={image.src}
                                     alt="test"
                                     fill
+                                    priority
                                     sizes="30vw"
-                                    loading="lazy"
-                                    headers={{
-                                      'Cache-Control': 'public, max-age=86400, immutable'
-                                    }}
+                                    // headers={{
+                                    //   'Cache-Control': 'public, max-age=86400, immutable'
+                                    // }}
                                     style={{
                                         objectFit: "cover",
                                     }}
@@ -182,7 +185,9 @@ export default function Dashboard({ imagesArray, tour }) {
                                         paddingBlock: "4vw",
                                         width: "36vw",
                                     }}
-                                    onClick={() => {handleToggle(image.id)}}
+                                    onClick={() => {
+                                        handleToggle(image.id);
+                                    }}
                                 >
                                     {image.isFeatured
                                         ? "remove from Featured Work"
@@ -311,7 +316,6 @@ function MyForm({ tour }) {
     }
 
     return (
-
         <form
             onSubmit={handleSubmit}
             style={{
@@ -321,9 +325,9 @@ function MyForm({ tour }) {
             }}
             className="vstack"
         >
-        <label htmlFor="title" style={{ marginBottom: "2vw" }}>
-            scroll down to see the gallery section
-        </label>
+            <label htmlFor="title" style={{ marginBottom: "2vw" }}>
+                scroll down to see the gallery section
+            </label>
             <label htmlFor="title" style={{ marginBottom: "2vw" }}>
                 TOUR:
             </label>
@@ -335,7 +339,7 @@ function MyForm({ tour }) {
                 name="title"
                 value={title}
                 onChange={handleInputChange}
-                style={{ padding: "1vw", marginBottom: "8vw", fontSize: '5vw' }}
+                style={{ padding: "1vw", marginBottom: "8vw", fontSize: "5vw" }}
             />
 
             <label htmlFor="description" style={{ marginBottom: "2vw" }}>
@@ -345,7 +349,12 @@ function MyForm({ tour }) {
                 name="description"
                 value={description}
                 onChange={handleInputChange}
-                style={{ height: "60vw", padding: "1vw", marginBottom: "8vw", fontSize: '5vw' }}
+                style={{
+                    height: "60vw",
+                    padding: "1vw",
+                    marginBottom: "8vw",
+                    fontSize: "5vw",
+                }}
             />
 
             <label htmlFor="startDate" style={{ marginBottom: "2vw" }}>
@@ -356,7 +365,7 @@ function MyForm({ tour }) {
                 name="startDate"
                 value={startDate}
                 onChange={handleInputChange}
-                style={{ padding: "1vw", marginBottom: "8vw", fontSize: '5vw' }}
+                style={{ padding: "1vw", marginBottom: "8vw", fontSize: "5vw" }}
             />
 
             <label htmlFor="endDate" style={{ marginBottom: "2vw" }}>
@@ -367,7 +376,7 @@ function MyForm({ tour }) {
                 name="endDate"
                 value={endDate}
                 onChange={handleInputChange}
-                style={{ padding: "1vw", marginBottom: "8vw", fontSize: '5vw' }}
+                style={{ padding: "1vw", marginBottom: "8vw", fontSize: "5vw" }}
             />
 
             <label htmlFor="artists" style={{ marginBottom: "2vw" }}>
@@ -378,7 +387,7 @@ function MyForm({ tour }) {
                 name="artists"
                 value={artists}
                 onChange={handleInputChange}
-                style={{ padding: "1vw", marginBottom: "8vw", fontSize: '5vw' }}
+                style={{ padding: "1vw", marginBottom: "8vw", fontSize: "5vw" }}
             />
 
             <label htmlFor="file" style={{ marginBottom: "2vw" }}>
@@ -388,7 +397,7 @@ function MyForm({ tour }) {
                 type="file"
                 name="file"
                 onChange={handleFileChange}
-                style={{ padding: "1vw", marginBottom: "8vw", fontSize: '5vw' }}
+                style={{ padding: "1vw", marginBottom: "8vw", fontSize: "5vw" }}
             />
 
             <button
