@@ -56,7 +56,7 @@ export default function Gallery({ images }) {
                             columnGap: "2vw",
                         }}
                     >
-                        {images
+                        {images.slice(0, 6)
                             .sort((a, b) => {
                                 return (
                                     b.uploadDate.seconds - a.uploadDate.seconds
@@ -77,8 +77,8 @@ export default function Gallery({ images }) {
                                             src={image.src}
                                             alt="test"
                                             fill
-                                            sizes="100vw"
-                                            priority
+                                            sizes="50vw"
+                                            loading="lazy"
                                             style={{
                                                 objectFit: "cover",
                                             }}
@@ -108,7 +108,7 @@ export default function Gallery({ images }) {
                             paddingTop: '12vw',
                         }}
                     >
-                        {images
+                        {images.slice(0, 6)
                             .sort((a, b) => {
                                 return (
                                     b.uploadDate.seconds - a.uploadDate.seconds
@@ -129,8 +129,8 @@ export default function Gallery({ images }) {
                                             src={image.src}
                                             alt="test"
                                             fill
-                                            sizes="100vw"
-                                            priority
+                                            sizes="30vw"
+                                            loading="lazy"
                                             style={{
                                                 objectFit: "cover",
                                             }}

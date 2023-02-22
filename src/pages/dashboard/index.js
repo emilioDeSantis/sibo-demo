@@ -37,9 +37,21 @@ export const getServerSideProps = async (context) => {
 };
 
 export default function Dashboard({ imagesArray, tour }) {
+    const [numFilesSelected, setNumFilesSelected] = useState(0);
+
+    function handleFileSelect(e) {
+      setNumFilesSelected(e.target.files.length);
+
+    }
+
+
+
     const [images, setImages] = useState(imagesArray);
+
+    const [n, setN] = useState(1);
     console.log(tour);
     async function handleAddImages(e) {
+        handleFileSelect(e)
         const files = e.target.files;
 
         for (let i = 0; i < files.length; i++) {
@@ -47,6 +59,7 @@ export default function Dashboard({ imagesArray, tour }) {
             const fileName = file.name + file.lastModified;
             const url = await uploadFileToFirebase(file, fileName);
             await addImage(url, fileName);
+            setN((prevN => prevN + 1))
         }
         location.reload()
     }
@@ -98,6 +111,14 @@ export default function Dashboard({ imagesArray, tour }) {
                     padding: "2vw", }}>
                 GALLERY:
             </label>
+            {numFilesSelected > 0 && <label
+                style={{
+                    padding: "2vw",
+                    fontSize: '10vw'
+                }}
+            >
+                uploading {n} / {numFilesSelected}
+            </label>}
             <label
                 style={{
                     padding: "2vw",
@@ -114,7 +135,7 @@ export default function Dashboard({ imagesArray, tour }) {
                 onChange={handleAddImages}
             />
 
-            {images
+            {images.slice(0, 6)
                 .sort((a, b) => {
                     return b.uploadDate.seconds - a.uploadDate.seconds;
                 })
@@ -133,8 +154,11 @@ export default function Dashboard({ imagesArray, tour }) {
                                     src={image.src}
                                     alt="test"
                                     fill
-                                    sizes="100vw"
-                                    priority
+                                    sizes="30vw"
+                                    loading="lazy"
+                                    headers={{
+                                      'Cache-Control': 'public, max-age=86400, immutable'
+                                    }}
                                     style={{
                                         objectFit: "cover",
                                     }}
@@ -278,7 +302,6 @@ function MyForm({ tour }) {
         newTour.description = description;
         newTour.startDate = startDate;
         newTour.endDate = endDate;
-        console.log(artists);
         newTour.artists = artists.split(",").map((item) => item.trim());
 
         await updateTour(newTour);

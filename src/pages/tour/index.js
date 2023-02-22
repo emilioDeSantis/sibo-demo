@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Fragment, useEffect } from "react";
 import Arrow from "../../components/Arrow";
 import ArrowButton from "../../components/ArrowButton";
+import ArrowLink from "../../components/ArrowLink";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { getTour } from "../../firebase/database";
@@ -180,9 +181,9 @@ export default function Tour({ data }) {
                     <p className="subtitle" style={{}}>
                         INSTAGRAM
                     </p>
-                    <p className="text" style={{}}>
-                        {"@Larnelle.Art -->"}
-                    </p>
+                    <ArrowLink href="https://www.instagram.com/larnelle.art/">
+                        @Larnelle.Art
+                    </ArrowLink>
                     <p className="subtitle" style={{}}>
                         EMAIL
                     </p>
@@ -489,9 +490,9 @@ export default function Tour({ data }) {
                             <p className="subtitle" style={{}}>
                                 INSTAGRAM
                             </p>
-                            <p className="text" style={{}}>
-                                {"@Larnelle.Art -->"}
-                            </p>
+                            <ArrowLink href="https://www.instagram.com/larnelle.art/">
+                                @Larnelle.Art
+                            </ArrowLink>
                             <p className="subtitle" style={{}}>
                                 EMAIL
                             </p>

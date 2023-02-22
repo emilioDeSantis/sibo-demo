@@ -42,7 +42,7 @@ export default function About() {
                         </div>
                     </div>
 
-                    <Subtitle text={"BIOGRAPHY"} href={"/church1.png"} />
+                    <Subtitle text={"BIOGRAPHY"} href={"/bg7.png"} />
 
                     <p className="paragrapgh" style={{}}>
                         Larnelle is a talented and experienced tattoo artist who
@@ -79,7 +79,7 @@ export default function About() {
                         />
                     </div>
 
-                    <Subtitle text={"PROCESS"} href={"/church1.png"} />
+                    <Subtitle text={"PROCESS"} href={"/bg8.png"} />
 
                     <p className="paragrapgh" style={{}}>
                         Larnelle approaches each tattoo design with a creative
@@ -92,7 +92,7 @@ export default function About() {
                         style={{
                             marginTop: "24vw",
                             width: "100vw",
-                            aspectRatio: "0.8",
+                            height: '120vw',
                             position: "relative",
                             overflow: "hidden",
                             zIndex: "2",
@@ -110,7 +110,7 @@ export default function About() {
                         />
                     </div>
 
-                    <Subtitle text={"THE MUZEOM"} href={"/church1.png"} />
+                    <Subtitle text={"THE MUZEOM"} href={"/bg9.png"} />
 
                     <p className="paragrapgh" style={{}}>
                         Larnelle is the proud owner of The Muzeom, a premier
@@ -133,7 +133,7 @@ export default function About() {
                         style={{
                             marginTop: "24vw",
                             width: "100vw",
-                            aspectRatio: "1.4",
+                            height: '120vw',
                             position: "relative",
                             overflow: "hidden",
                             zIndex: "2",
@@ -458,7 +458,7 @@ export default function About() {
                                     style={{
                                         marginTop: "3vw",
                                         width: "35vw",
-                                        height: "26vw",
+                                        height: "35vw",
                                         position: "relative",
                                         overflow: "hidden",
                                         zIndex: "2",

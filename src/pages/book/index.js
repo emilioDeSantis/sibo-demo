@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 import Arrow from "../../components/Arrow";
 import ArrowButton from "../../components/ArrowButton";
+import ArrowLink from "../../components/ArrowLink";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Subtitle from "../../components/Subtitle";
@@ -25,16 +26,16 @@ export default function Book() {
                     <p className="subtitle" style={{}}>
                         INSTAGRAM
                     </p>
-                    <p className="text" style={{}}>
-                        {"@Larnelle.Art -->"}
-                    </p>
+                    <ArrowLink href="https://www.instagram.com/larnelle.art/">
+                        @Larnelle.Art
+                    </ArrowLink>
                     <p className="subtitle" style={{}}>
                         EMAIL
                     </p>
                     <p className="text" style={{}}>
                         Larnellepienaar@yahoo.com
                     </p>
-                    <Subtitle text={"THE MUZEOM"} href={"/church1.png"} />
+                    <Subtitle text={"THE MUZEOM"} href={"/bg1.png"} />
 
                     <p className="paragrapgh" style={{}}>
                         Larnelle is the owner of The Muzeom tattoo shop in
@@ -56,13 +57,17 @@ export default function Book() {
                             <p className="subtitle" style={{}}>
                                 LOCATION
                             </p>
-                            <p className="text" style={{}}>
+                            <ArrowLink
+                                href={
+                                    "https://www.google.com/maps/place/The+Muzeom/@-26.1930242,28.2393038,17z/data=!4m15!1m8!3m7!1s0x1e9516fb36e25a41:0xf497cba699120b56!2s1+Foley+St,+Jan+Smuts+Ville,+Boksburg,+1459,+South+Africa!3b1!8m2!3d-26.193029!4d28.2414925!16s%2Fg%2F11fsms442p!3m5!1s0x1e951907bce9ae17:0x3e36279ba4360247!8m2!3d-26.1929339!4d28.2420257!16s%2Fg%2F11p3dk1y1t"
+                                }
+                            >
                                 1 Foley St, <br></br>
                                 Jan Smuts Ville, <br></br>
                                 Boksburg, <br></br>
                                 1459, <br></br>
-                                South Africa{" -->"}
-                            </p>
+                                South Africa
+                            </ArrowLink>
                         </div>
                         <div className="vstack" style={{}}>
                             <p className="subtitle" style={{}}>
@@ -75,9 +80,11 @@ export default function Book() {
                             <p className="subtitle" style={{}}>
                                 INSTAGRAM
                             </p>
-                            <p className="text" style={{}}>
-                                @The_Muzeom{" -->"}
-                            </p>
+                            <ArrowLink
+                                href={"https://www.instagram.com/the_muzeom/"}
+                            >
+                                @The_Muzeom
+                            </ArrowLink>
                         </div>
                     </div>
                     <div
@@ -90,7 +97,7 @@ export default function Book() {
                     >
                         <ArrowButton name="TOUR" href="/tour" thin={true} />
                     </div>
-                    <Subtitle text={"PROCEDURE"} href={"/church1.png"} />
+                    <Subtitle text={"PROCEDURE"} href={"/bg2.png"} />
 
                     <p className="paragrapgh" style={{}}>
                         Getting a tattoo is a big decision, and we want to make
@@ -109,7 +116,7 @@ export default function Book() {
                         and high-quality tattoos that our clients will cherish
                         for a lifetime.
                     </p>
-                    <Subtitle text={"POLICY"} href={"/church1.png"} />
+                    <Subtitle text={"POLICY"} href={"/bg3.png"} />
 
                     <p className="paragrapgh" style={{}}>
                         At The Muzeom, we take the health and safety of our
@@ -124,7 +131,7 @@ export default function Book() {
                         please feel free to ask any questions or voice any
                         concerns during your consultation or appointment.
                     </p>
-                    <Subtitle text={"PRICING"} href={"/church1.png"} />
+                    <Subtitle text={"PRICING"} href={"/bg4.png"} />
 
                     <p className="paragrapgh" style={{}}>
                         The final cost of a tattoo depends on several factors,
@@ -137,7 +144,7 @@ export default function Book() {
                         have any questions about our pricing or payment options,
                         please do not hesitate to ask.
                     </p>
-                    <Subtitle text={"AFTERCARE"} href={"/church1.png"} />
+                    <Subtitle text={"AFTERCARE"} href={"/bg5.png"} />
 
                     <p className="paragrapgh" style={{}}>
                         Taking proper care of your new tattoo is crucial for
@@ -176,7 +183,7 @@ export default function Book() {
                         SPF sunscreen after it has fully healed.
                     </p>
 
-                    <Subtitle text={"F.A.Q."} href={"/church1.png"} />
+                    <Subtitle text={"F.A.Q."} href={"/bg6.png"} />
 
                     <p className="paragrapgh" style={{}}>
                         <b style={{ fontWeight: "600" }}>
@@ -456,9 +463,9 @@ export default function Book() {
                                 <p className="subtitle" style={{}}>
                                     INSTAGRAM
                                 </p>
-                                <p className="text" style={{}}>
-                                    {"@Larnelle.Art -->"}
-                                </p>
+                                <ArrowLink href="https://www.instagram.com/larnelle.art/">
+                                    @Larnelle.Art
+                                </ArrowLink>
                                 <p className="subtitle" style={{}}>
                                     EMAIL
                                 </p>
@@ -468,7 +475,7 @@ export default function Book() {
 
                                 <Subtitle
                                     text={"THE MUZEOM"}
-                                    href={"/church1.png"}
+                                    href={"/bg1.png"}
                                 />
 
                                 <p className="paragrapgh" style={{}}>
@@ -491,13 +498,17 @@ export default function Book() {
                                         <p className="subtitle" style={{}}>
                                             LOCATION
                                         </p>
-                                        <p className="text" style={{}}>
+                                        <ArrowLink
+                                            href={
+                                                "https://www.google.com/maps/place/The+Muzeom/@-26.1930242,28.2393038,17z/data=!4m15!1m8!3m7!1s0x1e9516fb36e25a41:0xf497cba699120b56!2s1+Foley+St,+Jan+Smuts+Ville,+Boksburg,+1459,+South+Africa!3b1!8m2!3d-26.193029!4d28.2414925!16s%2Fg%2F11fsms442p!3m5!1s0x1e951907bce9ae17:0x3e36279ba4360247!8m2!3d-26.1929339!4d28.2420257!16s%2Fg%2F11p3dk1y1t"
+                                            }
+                                        >
                                             1 Foley St, <br></br>
                                             Jan Smuts Ville, <br></br>
                                             Boksburg, <br></br>
                                             1459, <br></br>
-                                            South Africa{" -->"}
-                                        </p>
+                                            South Africa
+                                        </ArrowLink>
                                     </div>
                                     <div className="vstack" style={{}}>
                                         <p className="subtitle" style={{}}>
@@ -510,9 +521,13 @@ export default function Book() {
                                         <p className="subtitle" style={{}}>
                                             INSTAGRAM
                                         </p>
-                                        <p className="text" style={{}}>
-                                            @The_Muzeom{" -->"}
-                                        </p>
+                                        <ArrowLink
+                                            href={
+                                                "https://www.instagram.com/the_muzeom/"
+                                            }
+                                        >
+                                            @The_Muzeom
+                                        </ArrowLink>
                                     </div>
                                 </div>
                                 <Link
@@ -547,7 +562,7 @@ export default function Book() {
                                 </Link>
                                 <Subtitle
                                     text={"PROCEDURE"}
-                                    href={"/church1.png"}
+                                    href={"/bg2.png"}
                                 />
 
                                 <p
@@ -575,13 +590,14 @@ export default function Book() {
                                     unique and high-quality tattoos that our
                                     clients will cherish for a lifetime.
                                 </p>
-                                <Subtitle
-                                    text={"POLICY"}
-                                    href={"/church1.png"}
-                                />
+                                <Subtitle text={"POLICY"} href={"/bg3.png"} />
 
-                                <p className="paragrapgh" style={{
-                                        marginBottom: "14.6vw",}}>
+                                <p
+                                    className="paragrapgh"
+                                    style={{
+                                        marginBottom: "14.6vw",
+                                    }}
+                                >
                                     At The Muzeom, we take the health and safety
                                     of our clients and staff very seriously. We
                                     require all clients to show proof of ID and
@@ -597,13 +613,14 @@ export default function Book() {
                                     ask any questions or voice any concerns
                                     during your consultation or appointment.
                                 </p>
-                                <Subtitle
-                                    text={"PRICING"}
-                                    href={"/church1.png"}
-                                />
+                                <Subtitle text={"PRICING"} href={"/bg4.png"} />
 
-                                <p className="paragrapgh" style={{
-                                        marginBottom: "21vw",}}>
+                                <p
+                                    className="paragrapgh"
+                                    style={{
+                                        marginBottom: "21vw",
+                                    }}
+                                >
                                     The final cost of a tattoo depends on
                                     several factors, such as the size,
                                     complexity, and placement of the design.
@@ -617,9 +634,10 @@ export default function Book() {
                                     our pricing or payment options, please do
                                     not hesitate to ask.
                                 </p>
+
                                 <Subtitle
                                     text={"AFTERCARE"}
-                                    href={"/church1.png"}
+                                    href={"/bg5.png"}
                                 />
 
                                 <p className="paragrapgh" style={{}}>
@@ -668,10 +686,7 @@ export default function Book() {
                                     healed.
                                 </p>
 
-                                <Subtitle
-                                    text={"F.A.Q."}
-                                    href={"/church1.png"}
-                                />
+                                <Subtitle text={"F.A.Q."} href={"/bg6.png"} />
 
                                 <p className="paragrapgh" style={{}}>
                                     <b style={{ fontWeight: "600" }}>
@@ -780,10 +795,12 @@ export default function Book() {
                                     artist can advise on the best course of
                                     action.<br></br>
                                     <br></br>
-                                    <div style={{
-                                        height: '4vw',
-                                    }}/>
                                 </p>
+                                <div
+                                    style={{
+                                        height: "4vw",
+                                    }}
+                                />
                             </div>
                         </div>
                     </div>

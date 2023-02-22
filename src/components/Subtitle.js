@@ -28,7 +28,7 @@ export default function Subtitle({ text, href }) {
                             priority
                             style={{
                                 objectFit: "cover",
-                                opacity: "40%",
+                                // opacity: "40%",
                             }}
                         />
 
@@ -98,7 +98,7 @@ export default function Subtitle({ text, href }) {
                             priority
                             style={{
                                 objectFit: "cover",
-                                opacity: "40%",
+                                // opacity: "40%",
                             }}
                         />
                     </div>
