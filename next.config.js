@@ -4,7 +4,7 @@ const nextConfig = {
     swcMinify: true,
     images: {
         domains: ["firebasestorage.googleapis.com"],
-        minimunCacheTTL: 40,
+        minimunCacheTTL: 10000,
     },
 };
 

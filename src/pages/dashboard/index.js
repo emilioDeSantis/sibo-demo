@@ -141,7 +141,7 @@ export default function Dashboard({ imagesArray, tour }) {
                 .sort((a, b) => {
                     return b.uploadDate.seconds - a.uploadDate.seconds;
                 })
-                .slice(0, 6)
+                // .slice(0, 6)
                 .map((image, index) => {
                     return (
                         <div className="hstack" style={{}} key={image.id}>
