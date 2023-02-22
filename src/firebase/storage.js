@@ -12,7 +12,10 @@ export function uploadFileToFirebase(file, name) {
 
     return new Promise((resolve) => {
         const storageRef = ref(storage, `images/${name}`);
-        const uploadTask = uploadBytesResumable(storageRef, file);
+        const metadata = {
+            cacheControl: 'max-age=3600'
+          }
+        const uploadTask = uploadBytesResumable(storageRef, file, metadata);
         uploadTask.on(
             "state_changed",
             (snapshot) => {
