@@ -109,7 +109,7 @@ export default function Gallery({ images }) {
                             paddingTop: '12vw',
                         }}
                     >
-                        {images.slice(0, 6)
+                        {images
                             .sort((a, b) => {
                                 return (
                                     b.uploadDate.seconds - a.uploadDate.seconds
