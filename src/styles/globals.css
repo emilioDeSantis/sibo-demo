@@ -1,10 +1,10 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  background: #000;
-  font-family: "Poppins", BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-      Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    background: #000;
+    font-family: "Poppins", BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+        Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 :root {
     /* --theme-color: #1c4dff;
@@ -62,6 +62,9 @@ button {
 
 .show-in-desktop {
     display: none;
+}
+.show-in-mobile {
+    display: flex;
 }
 
 /* .navbar {
@@ -159,5 +162,36 @@ button {
 
     .show-in-desktop {
         display: flex;
+    }
+    .show-in-mobile {
+        display: none;
+    }
+
+    .paragrapgh {
+        font-weight: 300;
+        font-size: 1.4vw;
+        margin-inline: 3vw;
+        margin-top: 6vw;
+        line-height: 150%;
+        z-index: 1;
+        opacity: 70%;
+    }
+
+    .subtitle {
+        font-weight: 800;
+        font-size: 1.2vw;
+        margin-inline: 3vw;
+        margin-top: 3vw;
+        line-height: 200%;
+        z-index: 1;
+    }
+
+    .text {
+        font-weight: 300;
+        font-size: 1.4vw;
+        margin-inline: 3vw;
+        line-height: 140%;
+        z-index: 1;
+        opacity: 70%;
     }
 }

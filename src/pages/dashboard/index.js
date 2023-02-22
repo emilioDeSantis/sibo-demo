@@ -48,12 +48,8 @@ export default function Dashboard({ imagesArray, tour }) {
             const url = await uploadFileToFirebase(file, fileName);
             await addImage(url, fileName);
         }
+        location.reload()
     }
-
-    // async function handleDeleteImage(image) {
-    //     await deleteFileFromFirebaseStorage(`images/${image.fileName}`);
-    //     await deleteImageFromFirestore(image.id);
-    // }
 
     async function handleDeleteImage(image) {
         const fileName = `images/${image.fileName}`;
@@ -107,7 +103,7 @@ export default function Dashboard({ imagesArray, tour }) {
                     padding: "2vw",
                 }}
             >
-                Add image to gallery:
+                Add images to gallery:
             </label>
             <input
                 type="file"
@@ -168,20 +164,6 @@ export default function Dashboard({ imagesArray, tour }) {
                                         ? "remove from Featured Work"
                                         : "add to Featured Work"}
                                 </div>
-                                {/* 
-                                <button
-                                    style={{
-                                        background: "red",
-                                        border: "2px solid white",
-                                        padding: "2vw",
-                                        paddingBlock: "4vw",
-                                    }}
-                                    onClick={() => {
-                                        handleDeleteImage(image);
-                                    }}
-                                >
-                                    Delete
-                                </button> */}
                                 <DeleteButton
                                     handleDeleteImage={handleDeleteImage}
                                     image={image}
@@ -254,104 +236,6 @@ function DeleteButton({ image, handleDeleteImage }) {
     );
 }
 
-// function MyForm({ tour }) {
-//     const [title, setTitle] = useState(tour.title);
-//     const [description, setDescription] = useState(tour.description);
-//     const [startDate, setStartDate] = useState(tour.startDate);
-//     const [endDate, setEndDate] = useState(tour.endDate);
-//     const [artists, setArtists] = useState(tour.artists);
-//     const [file, setFile] = useState(null);
-
-//     const handleInputChange = (event) => {
-//         const { name, value } = event.target;
-//         if (name === "title") {
-//             setTitle(value);
-//         } else if (name === "description") {
-//             setDescription(value);
-//         } else if (name === "startDate") {
-//             setStartDate(value);
-//         } else if (name === "endDate") {
-//             setEndDate(value);
-//         }
-//     };
-
-//     const handleArtistsChange = (event) => {
-//         const { value } = event.target;
-//         setArtists(value.split(","));
-//     };
-
-//     const handleFileChange = (event) => {
-//         const { files } = event.target;
-//         setFile(files[0]);
-//     };
-
-//     async function handleSubmit(event) {
-//         event.preventDefault();
-//         let newTour = {};
-
-//         if (file) {
-//             newTour.background = await updateTourBackground(file);
-//         }
-
-//         newTour.title = title;
-//         newTour.description = description;
-//         newTour.startDate = startDate;
-//         newTour.endDate = endDate;
-//         newTour.artists = artists.map(item => item.trim())
-
-//         // console.log(newTour);
-//         updateTour(newTour);
-
-//         // submit the form data
-//     }
-//     return (
-//         <form
-//             onSubmit={handleSubmit}
-//             style={{ marginTop: "24vw" }}
-//             className="vstack"
-//         >
-//             <label htmlFor="title">Title:</label>
-//             <input
-//                 type="text"
-//                 name="title"
-//                 value={title}
-//                 onChange={handleInputChange}
-//             />
-
-//             <label htmlFor="description">Description:</label>
-//             <textarea
-//                 name="description"
-//                 value={description}
-//                 onChange={handleInputChange}
-//             />
-
-//             <label htmlFor="startDate">Start Date:</label>
-//             <input
-//                 type="date"
-//                 name="startDate"
-//                 value={startDate}
-//                 onChange={handleInputChange}
-//             />
-
-//             <label htmlFor="endDate">End Date:</label>
-//             <input
-//                 type="date"
-//                 name="endDate"
-//                 value={endDate}
-//                 onChange={handleInputChange}
-//             />
-
-//             <label htmlFor="artists">Artists' instagram usernames (separated by commas):</label>
-//             <input type="text" name="artists" value={artists} onChange={handleArtistsChange} />
-
-//             <label htmlFor="file">Background Image:</label>
-//             <input type="file" name="file" onChange={handleFileChange} />
-
-//             <button type="submit">Submit</button>
-//         </form>
-//     );
-// }
-
 function MyForm({ tour }) {
     const [title, setTitle] = useState(tour.title);
     const [description, setDescription] = useState(tour.description);
@@ -404,214 +288,6 @@ function MyForm({ tour }) {
     }
 
     return (
-        // <form
-        //     onSubmit={handleSubmit}
-        //     style={{ marginTop: "24vw" }}
-        //     className="vstack"
-        // >
-        //     <label htmlFor="title">Title:</label>
-        //     <input
-        //         type="text"
-        //         name="title"
-        //         value={title}
-        //         onChange={handleInputChange}
-        //     />
-
-        //     <label htmlFor="description">Description:</label>
-        //     <textarea
-        //         name="description"
-        //         value={description}
-        //         onChange={handleInputChange}
-        //     />
-
-        //     <label htmlFor="startDate">Start Date:</label>
-        //     <input
-        //         type="date"
-        //         name="startDate"
-        //         value={startDate}
-        //         onChange={handleInputChange}
-        //     />
-
-        //     <label htmlFor="endDate">End Date:</label>
-        //     <input
-        //         type="date"
-        //         name="endDate"
-        //         value={endDate}
-        //         onChange={handleInputChange}
-        //     />
-
-        //     <label htmlFor="artists">Artists' instagram usernames (separated by commas):</label>
-        //     <input type="text" name="artists" value={artists} onChange={handleInputChange} />
-
-        //     <label htmlFor="file">Background Image:</label>
-        //     <input type="file" name="file" onChange={handleFileChange} />
-
-        //     <button type="submit">
-        //         {isUploading ? 'Updating...' : 'Submit'}
-        //     </button>
-        // </form>
-
-        // <form
-        //     onSubmit={handleSubmit}
-        //     style={{
-        //         marginTop: "24vw",
-        //         padding: "1vw",
-        //     }}
-        //     className="vstack"
-        // >
-        //     <label htmlFor="title">Title:</label>
-        //     <input
-        //         type="text"
-        //         name="title"
-        //         value={title}
-        //         onChange={handleInputChange}
-        //         style={{ padding: "1vw" }}
-        //     />
-
-        //     <label htmlFor="description">Description:</label>
-        //     <textarea
-        //         name="description"
-        //         value={description}
-        //         onChange={handleInputChange}
-        //         style={{ height: "30vw", padding: "1vw" }}
-        //     />
-
-        //     <label htmlFor="startDate">Start Date:</label>
-        //     <input
-        //         type="date"
-        //         name="startDate"
-        //         value={startDate}
-        //         onChange={handleInputChange}
-        //         style={{ padding: "1vw" }}
-        //     />
-
-        //     <label htmlFor="endDate">End Date:</label>
-        //     <input
-        //         type="date"
-        //         name="endDate"
-        //         value={endDate}
-        //         onChange={handleInputChange}
-        //         style={{ padding: "1vw" }}
-        //     />
-
-        //     <label htmlFor="artists">
-        //         Artists' instagram usernames (separated by commas):
-        //     </label>
-        //     <input
-        //         type="text"
-        //         name="artists"
-        //         value={artists}
-        //         onChange={handleInputChange}
-        //         style={{ padding: "1vw" }}
-        //     />
-
-        //     <label htmlFor="file">Background Image:</label>
-        //     <input
-        //         type="file"
-        //         name="file"
-        //         onChange={handleFileChange}
-        //         style={{ padding: "1vw" }}
-        //     />
-
-        //     <button
-        //         type="submit"
-        //         style={{
-        //             padding: "1vw",
-        //             backgroundColor: "#005eff",
-        //             color: "#fff",
-        //             border: "none",
-        //             marginTop: "3vw",
-        //         }}
-        //     >
-        //         {isUploading ? "Updating..." : "Submit"}
-        //     </button>
-        // </form>
-
-        // <form
-        //     onSubmit={handleSubmit}
-        //     style={{
-        //         marginTop: "24vw",
-        //         padding: "1vw",
-        //     }}
-        //     className="vstack"
-        // >
-        //     <label htmlFor="title" style={{ marginBottom: "2vw" }}>
-        //         Title:
-        //     </label>
-        //     <input
-        //         type="text"
-        //         name="title"
-        //         value={title}
-        //         onChange={handleInputChange}
-        //         style={{ padding: "1vw", marginBottom: "2vw" }}
-        //     />
-
-        //     <label htmlFor="description" style={{ marginBottom: "2vw" }}>
-        //         Description:
-        //     </label>
-        //     <textarea
-        //         name="description"
-        //         value={description}
-        //         onChange={handleInputChange}
-        //         style={{ height: "50vw", padding: "1vw", marginBottom: "2vw" }}
-        //     />
-
-        //     <label htmlFor="startDate" style={{ marginBottom: "2vw" }}>
-        //         Start Date:
-        //     </label>
-        //     <input
-        //         type="date"
-        //         name="startDate"
-        //         value={startDate}
-        //         onChange={handleInputChange}
-        //         style={{ padding: "1vw", marginBottom: "2vw" }}
-        //     />
-
-        //     <label htmlFor="endDate" style={{ marginBottom: "2vw" }}>
-        //         End Date:
-        //     </label>
-        //     <input
-        //         type="date"
-        //         name="endDate"
-        //         value={endDate}
-        //         onChange={handleInputChange}
-        //         style={{ padding: "1vw", marginBottom: "2vw" }}
-        //     />
-
-        //     <label htmlFor="artists" style={{ marginBottom: "2vw" }}>
-        //         Artists' instagram usernames (separated by commas):
-        //     </label>
-        //     <input
-        //         type="text"
-        //         name="artists"
-        //         value={artists}
-        //         onChange={handleInputChange}
-        //         style={{ padding: "1vw", marginBottom: "2vw" }}
-        //     />
-
-        //     <label htmlFor="file" style={{ marginBottom: "2vw" }}>
-        //         Background Image:
-        //     </label>
-        //     <input
-        //         type="file"
-        //         name="file"
-        //         onChange={handleFileChange}
-        //         style={{ padding: "1vw", marginBottom: "2vw" }}
-        //     />
-
-        //     <button
-        //         type="submit"
-        //         style={{
-        //             padding: "1vw",
-        //             backgroundColor: "#005eff",
-        //             color: "#fff",
-        //             border: "none",
-        //             marginTop: "3vw",
-        //         }}
-        //     >
-        //         {isUploading ? "Updating..." : "Submit"}
-        //     </button>
-        // </form>
 
         <form
             onSubmit={handleSubmit}
@@ -622,6 +298,9 @@ function MyForm({ tour }) {
             }}
             className="vstack"
         >
+        <label htmlFor="title" style={{ marginBottom: "2vw" }}>
+            scroll down to see the gallery section
+        </label>
             <label htmlFor="title" style={{ marginBottom: "2vw" }}>
                 TOUR:
             </label>
@@ -633,7 +312,7 @@ function MyForm({ tour }) {
                 name="title"
                 value={title}
                 onChange={handleInputChange}
-                style={{ padding: "1vw", marginBottom: "8vw" }}
+                style={{ padding: "1vw", marginBottom: "8vw", fontSize: '5vw' }}
             />
 
             <label htmlFor="description" style={{ marginBottom: "2vw" }}>
@@ -643,7 +322,7 @@ function MyForm({ tour }) {
                 name="description"
                 value={description}
                 onChange={handleInputChange}
-                style={{ height: "40vw", padding: "1vw", marginBottom: "8vw" }}
+                style={{ height: "60vw", padding: "1vw", marginBottom: "8vw", fontSize: '5vw' }}
             />
 
             <label htmlFor="startDate" style={{ marginBottom: "2vw" }}>
@@ -654,7 +333,7 @@ function MyForm({ tour }) {
                 name="startDate"
                 value={startDate}
                 onChange={handleInputChange}
-                style={{ padding: "1vw", marginBottom: "8vw" }}
+                style={{ padding: "1vw", marginBottom: "8vw", fontSize: '5vw' }}
             />
 
             <label htmlFor="endDate" style={{ marginBottom: "2vw" }}>
@@ -665,7 +344,7 @@ function MyForm({ tour }) {
                 name="endDate"
                 value={endDate}
                 onChange={handleInputChange}
-                style={{ padding: "1vw", marginBottom: "8vw" }}
+                style={{ padding: "1vw", marginBottom: "8vw", fontSize: '5vw' }}
             />
 
             <label htmlFor="artists" style={{ marginBottom: "2vw" }}>
@@ -676,7 +355,7 @@ function MyForm({ tour }) {
                 name="artists"
                 value={artists}
                 onChange={handleInputChange}
-                style={{ padding: "1vw", marginBottom: "8vw" }}
+                style={{ padding: "1vw", marginBottom: "8vw", fontSize: '5vw' }}
             />
 
             <label htmlFor="file" style={{ marginBottom: "2vw" }}>
@@ -686,7 +365,7 @@ function MyForm({ tour }) {
                 type="file"
                 name="file"
                 onChange={handleFileChange}
-                style={{ padding: "1vw", marginBottom: "8vw" }}
+                style={{ padding: "1vw", marginBottom: "8vw", fontSize: '5vw' }}
             />
 
             <button
