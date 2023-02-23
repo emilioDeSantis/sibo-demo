@@ -77,7 +77,6 @@ export default function Gallery({ images }) {
                                             src={image.src}
                                             alt="test"
                                             fill
-                                            priority
                                             sizes="50vw"
                                             loading="lazy"
                                             style={{
@@ -130,7 +129,6 @@ export default function Gallery({ images }) {
                                             src={image.src}
                                             alt="test"
                                             fill
-                                            priority
                                             sizes="30vw"
                                             loading="lazy"
                                             style={{

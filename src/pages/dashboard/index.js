@@ -141,7 +141,6 @@ export default function Dashboard({ imagesArray, tour }) {
                 .sort((a, b) => {
                     return b.uploadDate.seconds - a.uploadDate.seconds;
                 })
-                // .slice(0, 6)
                 .map((image, index) => {
                     return (
                         <div className="hstack" style={{}} key={image.id}>
@@ -157,7 +156,6 @@ export default function Dashboard({ imagesArray, tour }) {
                                     src={image.src}
                                     alt="test"
                                     fill
-                                    priority
                                     sizes="30vw"
                                     // headers={{
                                     //   'Cache-Control': 'public, max-age=86400, immutable'
