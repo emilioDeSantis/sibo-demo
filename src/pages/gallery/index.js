@@ -1,3 +1,4 @@
+import { NextSeo } from "next-seo";
 import Image from "next/image";
 import { Fragment } from "react";
 import ArrowButton from "../../components/ArrowButton";

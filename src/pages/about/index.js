@@ -10,6 +10,7 @@ import Subtitle from "../../components/Subtitle";
 export default function About() {
     return (
         <Fragment>
+        <NextSeo title="About | Larnelle Art" />
             <div className="show-in-mobile">
                 <div className="vstack" style={{}}>
                     <Header
