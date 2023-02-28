@@ -338,6 +338,7 @@ export default function Home({ images }) {
                                             priority
                                             style={{
                                                 objectFit: "cover",
+                                                background: '#444',
                                             }}
                                         />
                                     </div>
@@ -678,6 +679,7 @@ export default function Home({ images }) {
                                             priority
                                             style={{
                                                 objectFit: "cover",
+                                                background: '#444',
                                             }}
                                         />
                                     </div>

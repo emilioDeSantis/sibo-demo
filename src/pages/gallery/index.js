@@ -83,6 +83,7 @@ export default function Gallery({ images }) {
                                             loading="lazy"
                                             style={{
                                                 objectFit: "cover",
+                                                background: '#444',
                                             }}
                                         />
                                     </div>
@@ -135,6 +136,7 @@ export default function Gallery({ images }) {
                                             loading="lazy"
                                             style={{
                                                 objectFit: "cover",
+                                                background: '#444',
                                             }}
                                         />
                                     </div>
