@@ -11,6 +11,7 @@ import Subtitle from "../../components/Subtitle";
 export default function Book() {
     return (
         <Fragment>
+            <NextSeo title="Book | Larnelle Art" />
             <div className="show-in-mobile">
                 <div className="vstack">
                     <Header

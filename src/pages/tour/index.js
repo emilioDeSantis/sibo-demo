@@ -50,6 +50,9 @@ export default function Tour({ data }) {
     const title = "TOUR";
     return (
         <Fragment>
+            <NextSeo
+                title="Tour | Larnelle Art"
+            />
             <div className="show-in-mobile">
                 <div className="vstack" style={{}}>
                     <Header

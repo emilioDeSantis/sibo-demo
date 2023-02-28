@@ -27,6 +27,7 @@ export default function Gallery({ images }) {
     console.log(images);
     return (
         <Fragment>
+            <NextSeo title="Gallery | Larnelle Art" />
             <div className="show-in-mobile">
                 <div className="vstack">
                     <Header
@@ -105,7 +106,7 @@ export default function Gallery({ images }) {
                             paddingInline: "10vw",
                             rowGap: "1vw",
                             columnGap: "1vw",
-                            paddingTop: '12vw',
+                            paddingTop: "12vw",
                         }}
                     >
                         {images

@@ -39,37 +39,24 @@ export default function Home({ images }) {
     return (
         <Fragment>
             <NextSeo
-                title="Larnelle Art"
-                description="Tattoo Artist"
-                canonical="https://www"
+                title="LARNELLE ART | Quality Tattoos Brought to Life"
+                description="Larnelle is a premier tattoo artist who brings your vision to life with exceptional craftsmanship and attention to detail."
+                canonical="https://larnelleart.com"
                 openGraph={{
-                    url: "https://www",
-                    title: "Larnelle Art",
-                    description: "Tattoo Artist",
+                    url: "https://larnelleart.com",
+                    title: "LARNELLE ART | Quality Tattoos Brought to Life",
+                    description:
+                        "Larnelle is a premier tattoo artist who brings your vision to life with exceptional craftsmanship and attention to detail.",
                     images: [
                         {
                             url: "/openg.png",
                             width: 800,
                             height: 600,
-                            alt: "Og Image Alt",
+                            alt: "statue",
                             type: "image/png",
                         },
-                        {
-                            url: "https://www.example.com/og-image02.jpg",
-                            width: 900,
-                            height: 800,
-                            alt: "Og Image Alt Second",
-                            type: "image/jpeg",
-                        },
-                        { url: "https://www.example.com/og-image03.jpg" },
-                        { url: "https://www.example.com/og-image04.jpg" },
                     ],
                     site_name: "Larnelle Art",
-                }}
-                twitter={{
-                    handle: "@handle",
-                    site: "@site",
-                    cardType: "summary_large_image",
                 }}
             />
             <div className="show-in-mobile">
@@ -631,11 +618,13 @@ export default function Home({ images }) {
                             marginBottom: "4vw",
                         }}
                     >
-                        <div className="hstack"
-                                style={{
-                                    width: "100%",
-                                    justifyContent: 'center',
-                                }}>
+                        <div
+                            className="hstack"
+                            style={{
+                                width: "100%",
+                                justifyContent: "center",
+                            }}
+                        >
                             <div
                                 style={{
                                     fontSize: "10vw",
