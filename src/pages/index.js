@@ -756,7 +756,7 @@ export default function Home({ images }) {
                             }}
                         >
                             <Image
-                                src="/new choc foil.png"
+                                src="/new choc foil 4.png"
                                 alt="test"
                                 fill
                                 sizes="100vw"
@@ -765,7 +765,7 @@ export default function Home({ images }) {
                                 style={{
                                     objectFit: "cover",
 
-                                    filter: "saturate(150%)",
+                                    filter: "saturate(120%)",
                                 }}
                             />
                         </div>
@@ -797,7 +797,7 @@ export default function Home({ images }) {
                                 style={{
                                     objectFit: "cover",
 
-                                    filter: "saturate(130%)",
+                                    filter: "saturate(120%)",
                                 }}
                             />
                         </div>
