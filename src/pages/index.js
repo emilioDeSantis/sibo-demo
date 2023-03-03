@@ -530,21 +530,7 @@ export default function Home({ images }) {
                                 lineHeight: "140%",
                             }}
                         >
-                            with Sibö's export-quality chocolate bars. As a
-                            leader in Costa Rica's craft chocolate movement
-                            since 2007, Sibö Chocolate has become synonymous
-                            with artisanal chocolate creations. With three
-                            locations housing its artisanal chocolate factory,
-                            private chocolate tasting tour, farm-to-table
-                            restaurant, and chocolate shops in San Isidro de
-                            Heredia and Escazú neighborhoods, Sibö Chocolate has
-                            been delivering pure chocolate perfection to its
-                            customers. From premium chocolate confections to
-                            drinking chocolate and chocolate-coated nuts and
-                            fruit, Sibö Chocolate specializes in only the best.
-                            Join us on a journey of flavor and quality and
-                            experience the luxury of Costa Rican chocolate with
-                            Sibö.
+                            {"with Sibö's export-quality chocolate bars. As a leader in Costa Rica's craft chocolate movement since 2007, Sibö Chocolate has become synonymous with artisanal chocolate creations. With three locations housing its artisanal chocolate factory, private chocolate tasting tour, farm-to-table restaurant, and chocolate shops in San Isidro de Heredia and Escazú neighborhoods, Sibö Chocolate has been delivering pure chocolate perfection to its customers. From premium chocolate confections to drinking chocolate and chocolate-coated nuts and fruit, Sibö Chocolate specializes in only the best. Join us on a journey of flavor and quality and experience the luxury of Costa Rican chocolate with Sibö."}
                         </div>
                         <div
                             className="vstack"
