@@ -12,7 +12,7 @@ export default function About() {
     return (
         <Fragment>
         <NextSeo title="About | Larnelle Art" />
-            <div className="show-in-mobile">
+            {/* <div className="show-in-mobile">
                 <div className="vstack" style={{}}>
                     <Header
                         title={"ABOUT"}
@@ -571,7 +571,7 @@ export default function About() {
                     ></div>
                     <Footer page={"about"} />
                 </div>
-            </div>
+            </div> */}
         </Fragment>
     );
 }

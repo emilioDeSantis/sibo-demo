@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Fragment, useState } from "react";
 import Image from "next/image";
 
-const navigationRoutes = ["home", "gallery", "tour", "book", "about",];
+const navigationRoutes = ["home", "store", "about", "taste",];
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -141,19 +141,16 @@ export default function Navbar() {
                     zIndex: "9",
                     width: "100vw",
                     alignItems: "center",
-                    height: "6vw",
-                    background: '#000a',
+                    height: "5vw",
                     alignItems: 'center',
                     paddingInline: '8vw',
-                    backdropFilter: 'blur(10px)',
-                    WebkitBackdropFilter: 'blur(10px)',
                 }}
             >
                 <Link href="/">
                     <div
                         style={{
-                            height: "5vw",
-                            width: "20vw",
+                            height: "8vw",
+                            width: "8vw",
                             position: "relative",
                             overflow: "hidden",
                             transform: 'translate(0,0.4vw)',
@@ -220,8 +217,10 @@ function NavigationLink({ href, text, router, setOpen }) {
         <Link
             href={href === "/home" ? "/" : href}
             style={{
-                opacity: isActive? '100%' : '50%',
+                opacity: isActive? '100%' : '70%',
                 padding: '2vw',
+                fontSize: '1.2vw',
+                fontWeight: '300',
             }}
         >
             {text}
