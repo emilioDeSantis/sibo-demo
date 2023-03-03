@@ -61,6 +61,7 @@ export default function Home({ images }) {
                     site_name: "Sibo Chocolate",
                 }}
             />
+
             {/* <div className="show-in-mobile">
                 <div
                     className="vstack"
@@ -406,7 +407,6 @@ export default function Home({ images }) {
                                 style={{
                                     alignItems: "flex-end",
                                     gap: "0.5vw",
-                                    // background: 'blue'
                                 }}
                             >
                                 <div
