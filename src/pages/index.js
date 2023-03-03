@@ -12,6 +12,7 @@ import { getImages } from "../firebase/database";
 import useScrollPosition from "../hooks/useScrollPosistion";
 import useWindowSize from "../hooks/useWindowSize";
 import styles from "../styles/Home.module.css";
+import { animateScroll, scroller } from "react-scroll";
 
 export const getServerSideProps = async (context) => {
     try {
@@ -32,6 +33,7 @@ export const getServerSideProps = async (context) => {
 };
 
 export default function Home({ images }) {
+
     const title = "TATTOO ARTIST";
     const textOffset = 84;
     const lh = 1.35;
@@ -412,6 +414,7 @@ export default function Home({ images }) {
                                     style={{
                                         fontWeight: "300",
                                         fontSize: "2.4vw",
+                                        whiteSpace: "nowrap",
                                     }}
                                 >
                                     ONLINE STORE
@@ -504,7 +507,7 @@ export default function Home({ images }) {
                             style={{
                                 fontWeight: "800",
                                 fontSize: "5vw",
-                                width: "55vw",
+                                width: "58vw",
                                 lineHeight: "82%",
                             }}
                         >
@@ -552,6 +555,7 @@ export default function Home({ images }) {
                                     style={{
                                         fontWeight: "300",
                                         fontSize: "2.4vw",
+                                        whiteSpace: "nowrap",
                                     }}
                                 >
                                     LEARN MORE
@@ -698,6 +702,7 @@ export default function Home({ images }) {
                                         style={{
                                             fontWeight: "300",
                                             fontSize: "1.6vw",
+                                            whiteSpace: "nowrap",
                                         }}
                                     >
                                         SEE ALL PRODUCTS
@@ -736,8 +741,10 @@ export default function Home({ images }) {
                 </div>
                 <div
                     style={{
-                        width: "100vw",
-                        height: "100vh",
+                        width: "100%",
+                        height: "100%",
+                        position: "fixed",
+                        top: "0",
                         overflow: "hidden",
                     }}
                 >
@@ -745,97 +752,88 @@ export default function Home({ images }) {
                         style={{
                             width: "100%",
                             height: "100%",
-                            position: "fixed",
-                            top: "0",
+                            position: "relative",
                             overflow: "hidden",
                         }}
                     >
-                        <div
+                        <Image
+                            src="/new choc choc 2.png"
+                            alt="test"
+                            fill
+                            sizes="100vw"
+                            priority
+                            quality={100}
                             style={{
-                                width: "100%",
-                                height: "100%",
-                                position: "relative",
-                                overflow: "hidden",
-                            }}
-                        >
-                            <Image
-                                src="/new choc choc 2.png"
-                                alt="test"
-                                fill
-                                sizes="100vw"
-                                priority
-                                quality={100}
-                                style={{
-                                    objectFit: "cover",
+                                objectFit: "cover",
 
-                                    filter: "saturate(120%)",
-                                }}
-                            />
-                        </div>
+                                // filter: "saturate(120%)",
+                            }}
+                        />
                     </div>
+                </div>
+                <div
+                    // id="image2"
+                    style={{
+                        width: "100vw",
+                        height: `min(200vh - ${scrollPosition}px, 100vh)`,
+                        // height: `100vh`,
+                        position: "fixed",
+                        top: "0",
+                        overflow: "hidden",
+                    }}
+                >
                     <div
                         style={{
-                            width: "100%",
-                            height: `min(200vh - ${scrollPosition}px, 100vh)`,
-                            position: "fixed",
-                            top: "0",
+                            width: "100vw",
+                            height: "100vh",
+                            position: "relative",
                             overflow: "hidden",
                         }}
                     >
-                        <div
+
+                        <img
+                            src="/new choc foil 4.png"
+                            alt="test"
                             style={{
                                 width: "100%",
                                 height: "100vh",
-                                position: "relative",
-                                overflow: "hidden",
+                                objectFit: "cover",
+                                // filter: "saturate(120%)",
                             }}
-                        >
-                            <Image
-                                src="/new choc foil 4.png"
-                                alt="test"
-                                fill
-                                sizes="100vw"
-                                priority
-                                quality={100}
-                                style={{
-                                    objectFit: "cover",
-
-                                    filter: "saturate(120%)",
-                                }}
-                            />
-                        </div>
+                        />
                     </div>
+                </div>
+                <div
+                    // id="image1"
+                    style={{
+                        width: "100%",
+                        height: `calc(100vh - ${scrollPosition}px)`,
+                        // height: `100vh`,
+                        position: "fixed",
+                        top: "0",
+                        overflow: "hidden",
+                    }}
+                >
                     <div
                         style={{
                             width: "100%",
-                            height: `calc(100vh - ${scrollPosition}px)`,
-                            position: "fixed",
-                            top: "0",
+                            height: "100vh",
+                            position: "relative",
                             overflow: "hidden",
                         }}
                     >
-                        <div
+
+                        <img
+                            src="/new choc label.png"
+                            alt="test"
                             style={{
+                                objectFit: "cover",
                                 width: "100%",
                                 height: "100vh",
-                                position: "relative",
-                                overflow: "hidden",
-                            }}
-                        >
-                            <Image
-                                src="/new choc label.png"
-                                alt="test"
-                                fill
-                                sizes="100vw"
-                                quality={100}
-                                priority
-                                style={{
-                                    objectFit: "cover",
 
-                                    filter: "saturate(120%)",
-                                }}
-                            />
-                        </div>
+                                // filter: "saturate(120%)",
+                            }}
+                        />
                     </div>
                 </div>
             </div>
