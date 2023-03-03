@@ -41,14 +41,14 @@ export default function Home({ images }) {
     return (
         <Fragment>
             <NextSeo
-                title="LARNELLE ART | Quality Tattoos Brought to Life"
-                description="Larnelle is a premier tattoo artist who brings your vision to life with exceptional craftsmanship and attention to detail."
-                canonical="https://larnelleart.com"
+                title="SIBO CHOCOLATE DEMO"
+                description="demo description"
+                canonical="https://.com"
                 openGraph={{
-                    url: "https://larnelleart.com",
-                    title: "LARNELLE ART | Quality Tattoos Brought to Life",
+                    url: "https://.com",
+                    title: "SIBO CHOCOLATE DEMO",
                     description:
-                        "Larnelle is a premier tattoo artist who brings your vision to life with exceptional craftsmanship and attention to detail.",
+                        "demo description",
                     images: [
                         {
                             url: "/openg.png",
@@ -58,10 +58,10 @@ export default function Home({ images }) {
                             type: "image/png",
                         },
                     ],
-                    site_name: "Larnelle Art",
+                    site_name: "Sibo Chocolate",
                 }}
             />
-            <div className="show-in-mobile">
+            {/* <div className="show-in-mobile">
                 <div
                     className="vstack"
                     style={{
@@ -349,7 +349,7 @@ export default function Home({ images }) {
                         })}
                     <Footer page="" />
                 </div>
-            </div>
+            </div> */}
 
             <div className="show-in-desktop">
                 <div
